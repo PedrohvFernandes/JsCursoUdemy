@@ -1,3 +1,5 @@
+<!-- AULA 552 -->
+
 <!--Html arquivo de texto normal que pode ser aberto em qualquer editor de texto que entenda txt(Texto puro)-->
 <!--Tag Html -> <> por exemplo <p></p> é basicamente o que voce abre com esse sinal <escreve o nome da tag> e fecha a tag aqui, mas não esta fechando o corpo da tag
   aqui voce esta fechando o corpo da Tag </escreve> -->
@@ -35,8 +37,8 @@
 
 <!--1º coisa ->Qual que é o tipo desse documento, é preciso falar pro navegador que eu estou criando por exemplo o HTML5
   Se não especificar isso, na especificação da erro-->
-<!--Html é Insensitive -> Ele não liga se eu escrevi com letra maiuscula ou não
-  Outra maneira de escrevar a tag de baixo <!DOCTYPE html> -- isso que é ser Insensitive
+<!--Html é Case Insensitive -> Ele não liga se eu escrevi com letra maiuscula ou não
+  Outra maneira de escrevar a tag de baixo <!DOCTYPE html> -- isso que é ser Case Insensitive
   Então as tags podem estar escritas em maiusculo e minusculo, que não vai fazer diferença no HTML -->
 <!--Sempre colocar essa tag no meu documento HTML -->
 
@@ -107,3 +109,111 @@
              A tag <body> : dentro do body é tudo que for conteudo que a gente ver na pagina-
              A tag <Html> é tudo que for da meu html, no caso todos sao filhos dele-->
 <!-- para validar uma HTML-> https://validator.w3.org -->
+
+
+<!-- AULA 553-->
+
+<!-- ! basta colocar exclamação que o Vscode ja cria toda a estrutura do HTML-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+-->
+
+<!--
+<!doctype html>
+
+<html lang = "pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title> Meu HTML </title>  
+    </head>
+
+    <body>
+
+      A tag <p> é um paragrafo
+        lorem é um texto em latim, é so para ver o paragrafo
+        <p>
+         Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+         Veritatis est temporibus dolor laborum vero dolorem aut rerum debitis 
+         quaerat cum similique, voluptate porro mollitia ipsam quos, inventore pariatur? Ratione, earum!
+        </p>
+        
+      A taga <h1> é o titulo
+      <!--   h1 
+        <h1>
+            Meu HTML
+        </h1>
+
+    </body>
+
+
+</html>
+  -->
+-->
+  <!--Se uma tag tem corpo a gente precisa fechar ela -->
+
+  <!--Explicando sobre a tag <Span></Span>
+    <body>
+      <Span> Pedro </Span>
+      <Span> Pedro </Span>
+      <Span> Pedro </Span>
+      <Span> Pedro </Span>
+    </body>
+  eu colocoquei a tag <span> em varias linhas, mas
+  no navegador isso não iria acontecer, isso porque ela tem um estilo inline
+  ou seja o estilo dessa tag ela so é aplicada no texto, ela
+  não atrapalha outras coisas que possam estar do lado dessa tag 
+  no casso essa tag spn iria precisar do CSS para editar o estilo dela:Fonte, tamanho, cor, etc-->
+
+  <!--Tag <br>-->
+  <!-- é uma tag pra quebrar a linha e ela não tem corpo e não preciso em me preocupar em fechar ela, por exemplo:
+  <body>
+      <Span> Pedro </Span> <br>
+      <Span> Pedro </Span> <br>
+      <Span> Pedro </Span> <br>
+      <Span> Pedro </Span> 
+    </body>
+    Quebrando as linhas da tag <span> com a tag <br>
+      iria ficar assim no navegador:
+      Pedro
+      Pedro
+      Pedro
+      Pedro
+
+    Pode usar ela assim tambem:
+      <body>
+        Pedro henrique <br> Pedro Henrique
+      </body>
+    Nesse caso o Pedro henrique iria ficar assim no navegador:
+          Pedro Henrique
+          Pedro Henrique 
+    Se tirar a tag <br> iria ficar asim no navegador:
+          Pedro Henrique Pedro Henrique-->
+
+    <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    Essa meta tag não tem uma documentação especificação do HTML
+    ela foi introduzida pela apple no safari, mas quase todos navegadores aceitam essa meta tag
+    ela é muito avançado no MOMENTO
+    Essa meta tag é mais para celulares, pois eles usam uma janela virtual que se chama viewport
+    por isso o "viewport" - > Janela de exibição, essa janela virtual geralmente pra renderizar geralmente é maior do que a tela do dispositivo
+    Então a resolução dessa viewport pode ser mais larga do que a largura do dispositivo
+    Com isso a apple introduziu a meta tag <meta name="viewport" pra corrigir esse problema
+    falando qual que vai ser o tamanho do nosso viewport content="width=device-width, initial-scale=1.0"
+    width=device-width, initial-scale=1.0 - > Escala inicial da largura do dispositivo = 1.0
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta nome="janela de exibição" conteudo="Escala inicial da largura do dispositivo = 1.0">
+    Isso quer dizer que a viewport(A janela virtual) vai se encaixar do tamanho da tela do navegador
+    -->
+    
