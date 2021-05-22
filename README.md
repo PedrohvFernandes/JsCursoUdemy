@@ -1,2 +1,2 @@
 # JsCursoUdemy
-Repositório do projeto feito na udemy
+Repositório de projetos feitos no curso da udemy de JS
