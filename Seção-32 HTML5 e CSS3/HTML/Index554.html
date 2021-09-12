@@ -1,95 +1,54 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu HTML</title>
+<!doctype html>
 
-    <!-- Tag Style é a onde a gente coloca o nosso CSS dentro do HTML, não é o arquivo css separado em si, mas
-    com essa tag ja da para fazer um estilo o css-->
-        <!-- Com isso vem os identificadores, que vai servir para fazer algo com o elemento. Por exemplo: h1
-        ela precisa ter um fundo vermelho, mas não vou usar o id e nem a class e sim a tag h1, selecionar ela-->
-    <Style>
-        /* Selecionando o elemento/tag h1, para aplicar o estilo/css nela, todas as tags h1 nessa pagina html
-        ira ficar com a cor de fundo vermelho */
-        h1{
-            background-color: red;
-        }
+<html lang = "pt-BR">
 
-        /*Mesma especificidade, o que prevalece aqui é o que vem depois */
-        h1{
-            background-color: blue;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title> Meu HTML </title>  
+    </head>
 
-        /*
-        Agora por id, selecionando um elemento especifico cabecalho dois com fundo roxo, agora o  cabecalho um vai 
-        ficar azul e o dois roxo.
-        Então o que prevalece aqui é ID, mesmo que em seguida voce altere a cor pela tag, o que vai prevalecer
-        é o id
-        */
-        #cabecalho-dois{
-            background-color: purple;
-        }
+    <body>
 
-        /*
-        Com o identificador de classe:
-        Mesmo colocando fundo vermelho atraves da classe, não muda o h1 com id cabecalho-dois, pois o id 
-        é mais forte que seleção por tag e por classe
+        <!--Se uma tag tem corpo a gente precisa fechar ela -->
+        <!-- Tag com corpo: para titulos, cabeçalhos-->
+        <h1>
+            Meu HTML
+        </h1>
         
-        .fundo-vermelho{
-            background-color: red;
-        }
+        <!-- Tag com corpo: Paragrafo
+             Lorem:Texto em latim -->
+        <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Veritatis est temporibus dolor laborum vero dolorem aut rerum debitis 
+        quaerat cum similique, voluptate porro mollitia ipsam quos, inventore pariatur? Ratione, earum!
+        </p>
 
-        */
-            /*Pra substituir tem duas maneiras: 1º com outro ID ou 2º falando que isso é muito importante(NADA 
-            RECOMENDAVEL) isso força o navegador aplicar o estilo que eu quero
-            */
-        .fundo-vermelho{
-            background-color: red !important;
-        }
-
-        .bold{
-            color: pink;
-        }
-        
-    </Style>
-
-</head>
-<!-- Anatomia das tags:-->
-
-<!-- Hierarquia: -->
-<body>
-    
-        <!-- Atributos dentro das tags: Atributos que possuem valor e atributos que não possuem valor(o navegador coloca o valor boolean):
-            Ex: Id: identificador da tag, que é único, não pode repetir e tem valor dentro dele: id = “heading” 
-            Os valores são dentro das aspas duplas, mas podem ser colocados fora tambem, mas não é recomendavel
+        <!-- Sem quebra de linha, tag com estilo INLINE ou seja o estilo dessa tag ela so é aplicada no texto, ela
+             não atrapalha outras coisas que possam estar do lado dessa tag 
+             no casso essa tag spn iria precisar do CSS para editar o estilo dela:Fonte, tamanho, cor, etc
         -->
-        <!-- Padrão dos id é colocar traços no lugar dos espaços e sem acento -->
-            <!-- Identificador CLASS: Outro identificador é as classes, elas podem se repetir, 
-                a onde 10 elementos podem ter o mesmo nome da classe ou um elemento com mais de uma classe
-                passando o valor da classe pra identificar tal tag. Ex: varios cabeçalhos que precisam do fundo vermelho
-            -->
-       <!-- Com duas classe-->
-        <h1 id = "cabecalho-um" class = "fundo-vermelho segunda-classe">
-        
-            <!-- Tudo o que eu colocar aqui, vai ter que vim aqui dentro, seguindo a HIERARQUIA -->
-            Vai vir aqui
+        <Span> Pedro </Span>
+        <Span> Pedro </Span> 
+        <Span> Pedro </Span> 
+        <Span> Pedro </Span>
 
-        </h1>
+        <!-- Com quebra de linha: TAG BR: é uma tag pra quebrar a linha e ela não tem corpo e não preciso em me 
+            preocupar em fechar ela, por exemplo:
+        -->
+        <Span> Pedro </Span> <br>
+        <Span> Pedro </Span> <br>
+        <Span> Pedro </Span> <br>
+        <Span> Pedro </Span> 
 
-        <!-- Tag b, deixa em negrito-->
-        <p>Um texto <b class = "bold">qualquer</b>.</p>
-        <p>Um texto <b class = "bold">qualquer</b>.</p>
-        <p>Um texto <b class = "bold">qualquer</b>.</p>
-        <p>Um texto <b class = "bold">qualquer</b>.</p>
+        <!-- Com qubra de linha -->
+        Pedro henrique <br> Pedro Henrique
 
-        <!-- Com uma so classe-->
-        <h1 id = "cabecalho-dois"  class = "fundo-vermelho">
-            Vai vir aqui
-        </h1>
+         <!-- Sem quebra de linha-->
+        Pedro Henrique
+        Pedro Henrique 
 
-    
+    </body>
 
-</body>
+
 </html>
