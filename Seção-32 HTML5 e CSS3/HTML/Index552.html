@@ -1,18 +1,44 @@
-<!-- HTML:5 -->
+<!-- HTML:5 
+Sempre colocar essa tag no meu documento HTML
+<!doctype html> Isso aqui especifica pro nosso navegador que a gente ta criando um documento HTML5
+-->
 <!doctype html>
 
-<!-- tag html com o atributo lang para definl qual é a linguagem do meu documento-->
+<!-- 
+    Tag <HTML> a raiz, sempre que criar um documento HTML a tag RAIZ que é a tag ROUTE do meu HTML é <HTML>
+    essa tag tem corpo, porque todas as outras trags são filhas dela 
+    tag html com o atributo lang para definl qual é a linguagem do meu documento
+-->
 <html lang = "pt-BR">
 
+    <!-- Essa tag head não aparece no documento, o html que engloba tudo, mas ela trata de metadados do meu HTML
+    São metadados dos meus dados
+    É basicamente especificando o que tem no meu HTML 
+    -->
     <head>
 
-        <!--  para especificar qual é a codificação do meu caracter que eu estou utilizando -->
+        <!--    TAG IMPORTANTE: para especificar qual é a codificação do meu caracter que eu estou utilizando
+                Se não passar essa codificação de caracteres pode ser que em algum momento o seu navegador
+                Não consiga ler por exemplo, palavras acentuadas, ou c com cedilha, emojis, escritas
+                porque ele não entender a codificação de caracteres
+                Pra não ter esse tipo de problema a gente utiliza a tag metadado "meta"
+                Estamos mandando um metadado
+                ela não tem corpo, toda tag meta não tem corpo
+                "utf-8" especificando a codificação que é a mesma de caracteres pra escrever o codigo
+                essa codificação de caracteres é a mais utilizada e ela é uma parte do uni-code
+        -->
         <meta charset="UTF-8">
 
-        <!-- Titulo do documento HTML, o nome da Aba da pagina -->
+        <!-- TAG IMPORTANTE: Titulo do documento HTML, o nome da Aba da pagina -->
         <title> Meu HTML </title>  
     </head>
 
+    <!-- essa tag não é requerida no arquvio
+         Se validar um html sem body ele vai passar na validação
+         Body é super recomendavel que coloque 
+         Body é tudo o que a gente ve, a estrutura, o corpo 
+         Body é uma das mais importante
+    -->
     <body>
         <!-- Uma forma de escrever -->
         Olá

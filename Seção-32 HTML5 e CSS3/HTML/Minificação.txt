@@ -1,0 +1,5 @@
+A minificação ocorre após o código aplicação web ter sido escrita, mas antes de ter sido lançada. 
+Quando um usuário faz uma requisição para de uma página web, a versão minificada é enviada ao invés da versão 
+completa e com isso é possível obter uma resposta mais rápida e a um custo menor da banda de internet.
+
+Link: https://www.mundojs.com.br/2018/01/10/o-que-e-minificacao/ 
