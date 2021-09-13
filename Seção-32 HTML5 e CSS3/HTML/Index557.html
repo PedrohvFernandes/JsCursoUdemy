@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Meu HTML</title>
+
+    <!-- Movendo a tag style pro head e dentro dessa tag Style eu posso colocar um css
+        Selecionando por seletor tag, assim eu falo que todos os meus h1 vão ter o fundo vermelho
+        esses mesmos seletores usados aqui, são usados no JS
+    -->
+    <style>
+
+        /*
+        h1{
+            background-color: red;
+        }
+        */
+        .img-in-text{
+            width: 50px;
+            height: 44px;
+        }
+
+        .Azul{
+            color:blue;
+            font-size:150%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <!-- Toda tag HTML pode receber um atributo Style que recebe como valor o css, por exemplo background-color: red;  -->
+    <!-- O atributo style so se aplica a esse cabeçalho, então eu posso ter outro cabeçalho com h1 ou h2...h6
+    que não vai ser aplicado o estilo a elas e somente no cabeçalho anterior, pois o estilo esta nele
+    
+    <h1 style ="background-color: red;">Cabeçalho</h1>
+    -->
+    <h1>Cabeçalho</h1>
+    <h1>Cabeçalho</h1>
+
+    <!-- TAGS INLINE:-->
+
+    <!-- Conteudo -->
+    <!-- As tags inline: As tags que podem vir dentro de textos podem ser tags de negrito <b> bold
+        e essa tag gerou uma confusão em novos devs porque tem uma tag que é <strong> e ela tem a mesma
+        função do bold que é deixar em negrito-->
+        <!-- A tag Strong ela é semantica: Semantica é ter um significado, não é igual a tag b, a tag b foi feita
+        pra deixar um texto em negrito, ja a tag strong foi feita pra colocar uma palavra mais forte/enfase e isso
+        para um leitor de tela lendo o texto para um deficiente visual, essa frase/palavra vai ser lida mais forte -->
+    <p> <b>Lorem</b> <strong> ipsum </strong> dolor sit amet consectetur adipisicing elit. Culpa eveniet suscipit minus omnis placeat 
+        repellendus. Quidem totam qui rem optio, dolore error, soluta modi, laudantium autem adipisci quasi 
+        quis animi.
+    </p>
+    <!-- Tag <i> que é para italico e tem a tag em que é para dar enfase ao texto e deixa o texto em italico
+        pra alguem que usa leitor de telas, buscadores do google e entender a sua pagina diferente do que voce
+        quis, porquem <em> não é para deixar em italico, italico é <i>, o em é usado para dar enfase:"Eu AMOOOOO comer batata"
+        Com isso o leitor de telas vai ler essa palvra amoooo de uma forma diferente, isso que é a semantica  
+     -->
+            <!-- Tag link <a> a de ancora, e ela recebe um href, pra eu falar qual quer a referencia que eu quero
+                colocar, dentro do href eu posso colocar tanto arquivos no servidor da pagina ou um site, se eu colocar
+                dentro da tag de abertura um target pra que o link não abra na mesma pagina do html, tipo um link
+                externo pra ir para outra pagina, temos os target:target_self carrega a url no mesmo contexto de navegação
+                e por ae vai... Mas, se quiser abrir em outra aba o link é so colocar o valor _blank
+            -->
+                <!-- Dentro da propria tag <a> a gente pode utilizar o rel, que pode colocar pra especificar a relação
+                     entre o documento que esta sendo criado e o documento que voce esta linkando, qual que é a relação
+                     entre eles: Aqui fala a qualificação desses link: https://developers.google.com/search/docs/advanced/appearance/qualify-outbound-links?hl=pt-br  
+                -->
+    <p><i>ipsum</i>  <em>dolor</em>, sit amet <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/strong" target="_blank">consectetur</a> adipisicing elit. Culpa eveniet suscipit minus omnis placeat 
+        repellendus. Quidem totam qui rem optio, dolore error, soluta modi, laudantium autem adipisci quasi 
+        quis animi.
+    </p>
+
+    <!-- Tag de imagem: Caso queira colocar emoji dentro do texto, imagens, etc
+        Vamos usar o link do endereço de uma imagem a logo da MDN, src é a onde esta minha imagem, seja dentro do meu
+        proprio site, é so colocar o caminho dela e o nome dela com a extensão(.html .png) dela ou por links externos e deve colocar o alt
+        que é o texto alternativo dessa imagem, descrevendo aquela imagem, caso a imagem for apagada do servidor
+        vai aparecer o nome que voce colocou como alternativo e para uso de leitores de tela falando que o que é essa
+        imagem, pode descrever ela, falando que tem tal formato, tal cor, etc, é algo semantico
+         -->
+         <!-- A tag img ela não tem corpo, ela so possui atributos e não possui tag de fechamento-->
+            <!-- podemos colocar tambem o atributo width(largura):50, height(altura):44 os pixels dela, etc o que
+                não é o recomendavel, o certo é fazer na tag style no head ou no arquivo 
+                css(Ainda não chegamos a essa etapa) atraves da class dela ou usar o atributo style dentro da tag img
+            -->     
+    <p>ipsum  dolor, sit amet <img class="img-in-text"
+                                src="https://w7.pngwing.com/pngs/525/485/png-transparent-web-development-mdn-web-docs-cascading-style-sheets-javascript-web-browser-firefox-blue-angle-logo.png" 
+                                    alt="Logo da MDN, com um dinossauro branco no meio, com uma cor azul em volta" 
+                                />
+        consectetur adipisicing elit. Culpa eveniet suscipit minus omnis placeat 
+        repellendus. Quidem totam qui rem optio, dolore error, soluta modi, laudantium autem adipisci quasi 
+        quis animi.
+    </p>
+
+    <!-- Linkando uma imagem-->
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/strong" target="_blank">
+        <img class
+        src="https://w7.pngwing.com/pngs/525/485/png-transparent-web-development-mdn-web-docs-cascading-style-sheets-javascript-web-browser-firefox-blue-angle-logo.png" 
+            alt="Logo da MDN, com um dinossauro branco no meio, com uma cor azul em volta" 
+                width="50" 
+                    height="44"
+        />
+    </a>
+
+    <!-- Tags para uso especifico: Tag logica, que muda toda a logica de leitura: Caso eu escrevi vermelho e era azul, 
+         eu posso exlcuir esse texto vermelho usando a tag <del> ela risca a palavra em si e o <ins> de 
+         insert/adição que é a palavra correta em seguida, ou seja estou remover o vermelho e colocando o azul, 
+         isso é semantico.
+         E temos as tags fisica, que so muda fisca: tag risicada <s> e temos a tag de anderline
+    -->
+    <p><del>Vermelho</del> <ins>azul</ins>, <s>ipsum</s>  <u>dolor</u>, sit ametconsectetur adipisicing elit. Culpa eveniet suscipit minus omnis placeat 
+        repellendus. Quidem totam qui rem optio, dolore error, soluta modi, laudantium autem adipisci quasi 
+        quis animi.
+    </p>
+
+    <!-- tags para manipular textos, small é para deixar o texto menor
+         temos a tag sup pra fazer o elevado do numero 2² ou sub pra ficar em baixo H2O o 2 fica em baixo
+         sup pra subir e sub pra descer
+    -->
+    <p>Lorem ipsum, <Small>dolor</Small> sit 2<sup>2</sup> H<sub>2</sub>Oamet consectetur adipisicing elit. Illo nostrum numquam sunt harum deleniti 
+        suscipit asperiores expedita accusantium ex, exercitationem ducimus impedit tenetur cupiditate veritatis. 
+        Beatae nobis omnis animi consectetur.
+    </p>
+
+    <!-- Se eu der varios enter no meu texto aqui dentro da tag <p>paragrafo não vai alterar nada no meu texto
+         Eu teria que usar uma tag de quebra de linha <br>, tem a tag <q> para citar algo, citando, deixando entre
+         as aspas duplas, eu posso colocar o atributo cite que a onde eu posso colocar um arquivo do meu proprio
+         servidor ou um link externo, geralmente é um link externo, pra falar que eu estou citando algo que foi falado
+         na quele link, colocando o texto citado da quela pagina externa
+    -->
+    <p>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. <q cite=
+        "https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/strong">O elemento strong é utilizado em 
+        conteúdos que são de "grande importância", incluindo coisas de urgentes (como alertas).</q> Officiis, vero, 
+        dolore voluptatibus dignissimos aperiam praesentium quo, laboriosam odio maiores aspernatur earum est 
+        error? Reiciendis totam quia facere nemo sunt non.
+    </p>
+
+    <!-- TAGS QUE NÃO PODEM VIR DENTRO DO P, fora do paragrafos, porque elas não são inlines-->
+    
+    <!-- Essa tag ela faz um bloco de citação e sim ele pode receber o atributo cite
+    essa tag não pode ir para dentro do <p> mas ela pode receber uma tag <p> dentro dela-->
+    <blockquote cite="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/strong">
+        <p>Aqui eu estou fazendo um bloco de sitação</p>
+    </blockquote>
+
+    <!-- Tag de linha horizontal, separar um paragrafo do outro, por exemplo: porque eles são conteudos diferentes
+    ela é um bloco e não inline, por isso ela não pode ir dentro da tag P -->
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, earum iure sed provident labore 
+        explicabo recusandae ipsum magni quod fugit, libero nulla consequuntur, rem saepe natus odio doloremque. 
+        At, molestias.
+    </p>
+
+    <hr>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A sed modi nihil. Natus enim repellendus iste 
+        rerum aperiam odio, nemo exercitationem. Nostrum, omnis porro nam harum nobis totam nisi debitis!
+    </p>
+
+    <!-- Tag pra citar um codigo, ela usa uma font monospace, é uma fonte espaçada pra codigo, so que
+    o codigo em si não vai ficar formatado da forma que a gente queria dentro da tag <p>, então pra a gente colocar
+    codigo dentro do meu texto que tem quebra de linhas, que os espaços importam, eu tenho uma tag de texto pre formatado
+    é a tag <pre>, tudo que colocar dentro da tag pre vai se manter formatado da forma que voce queria
+    -->
+    <!-- FORMA ERRADA-->
+    <p>
+        <code>console.log</code> <br>
+
+        <code>
+            public class ExemploDeFor {
+            public static void main(String[] args) {
+                    for (int i = 0; i < 5; i++){
+                            System.out.println("Indice " + i);
+                    }
+            }
+    }
+        </code>
+    </p>
+
+    <!-- FORMA CERTA   -->>
+
+    <pre><code> public class ExemploDeFor {
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++){
+            System.out.println("Indice " + i);
+            }
+       }
+    }</code></pre>
+
+    <!-- Tag span e div, essas duas tags são containers genericos, o span é um container generico inline não é algo
+         semantico, é somente visual, suponha-se que eu quero colocar esse lorem em vermelho e maior, ela pode ser
+         usada no paragrafo, como ela é inline ela não derruba os outros elementos questão proximos dela, ela so fica
+         um pouco maior ou menor, com outra cor, etc. Obs: existe containers semanticos
+        -->
+    <p>
+        <span style="color: red; font-size:180%">Lorem</span> <span class="Azul">ipsum</span> dolor sit amet, consectetur adipisicing elit. Eum, adipisci! Deserunt nesciunt accusamus 
+        quam a ipsa? Voluptatibus nisi <span class="Azul"> quasi laudantium</span>, molestiae repellendus quaerat voluptate qui maiores 
+        ratione! Animi, dolorem ullam!
+    </p>
+
+    <!-- A div tambem é uma tag generica, mas não é inline, ela é um bloco, e sim ela poderia ter estilos-->
+        <!--  a diferença entre a span é inline(da para mudar isso) e a div é um bloco/display block(A gente pode mudar isso, mas por padrão é um bloco)-->
+    <div class="Azul">Eu sou um bloco, uma div.</div>
+
+    <!-- O div quebra o meu texto-->
+    <p>
+        Lorem <div class="Azul">Eu sou um bloco, uma div.</div> ipsum dolor sit amet consectetur adipisicing elit. Quos odit ratione aperiam dolorum laudantium 
+        minima sunt iste asperiores necessitatibus soluta, aspernatur labore. Unde in, temporibus accusantium 
+        dolore doloribus aut blanditiis?</p>
+
+    </body>
+</html>

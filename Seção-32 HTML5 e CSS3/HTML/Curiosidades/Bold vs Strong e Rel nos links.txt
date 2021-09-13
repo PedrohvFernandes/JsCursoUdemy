@@ -1,0 +1,3 @@
+https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/strong --> Bold vs Strong
+
+https://developers.google.com/search/docs/advanced/appearance/qualify-outbound-links?hl=pt-br --> Rel nos links
