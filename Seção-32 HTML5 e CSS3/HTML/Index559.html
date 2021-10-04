@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element#separação_de_conteúdo tags semanticas de separação de conteudo -->
+    <!-- Antes a gente tinha sites assim com divs e spans
+        ate mesmo com tabelas: tudo com div e id pra estruturar nosso conteudo, pois eles são containers-->
+
+    <!-- <header></header>     -->
+    <div id="header">
+        <!-- <nav></nav> de navegação menus-->
+        <div id="menu">
+
+        </div>
+    </div>
+    <div id="content"></div>
+
+    <!-- Com a vinda do HTML5 foram criadas tags especificas pra que 
+    use semantica pra criar algo especifico no site: exemplo de algumas, todas elas são container como a div, so que semanticamente-->
+
+    <address></address>  <!-- Color um endereço por exemplo final das 
+    paginas da empresa/autor-->
+
+    <article></article> <!-- É interessante pra criar posts em blogs
+    comentarios, parte de um artigo de um blog, produtos sendo article, ele pode ser repetido-->
+
+    <aside></aside><!-- textinho dentro uma caixa diferente, pode usar para sidebars tambem, porque ele é um conteudo que ta relacionado
+    com a pagina, mas que não esta dentro do conteudo em si, esta de 
+    fora relacionado com o conteudo que voce esta vendo ali, uma sidebar 
+    contem varios links então voce pode criar uma sidebar com aside, 
+    pode ser repetido-->
+
+    <footer></footer> <!-- Rodapé de uma determinada parte do site não so no body, ele vai estar relacioanado ao 
+    seu pai mais proximo, então ele pode ser repetido-->
+
+    <header></header> <!-- grupo de suporte introdutorio ou navegacional por exemplo menus que são navbars, ele tambem pode ser repetido -->
+
+    <h1></h1> <!-- h2 ... h6 titulos, subtitulo do titulo, 
+    subtitulo do subtitulos e vise versa-->
+
+    <hgroup></hgroup> <!-- Ele serve pra grupar cabeçalhos: h1 h2 etc-->
+
+    <main></main> <!-- ele define o conteudo principal do site, so pode
+    ter um main e o main não pode ser descendente de outras coisas-->
+
+    <nav> </nav> <!-- o nav andar junto com header: menu, aside:sidebar-->
+
+    <section></section> <!-- é uma seção generica contida dentro html, ele pode ser repetido-->
+</body>
+</html>
