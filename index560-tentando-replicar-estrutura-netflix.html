@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Netflix</title>
+
+    <style>
+
+        /* Estou falando que nem uma tag padrão do navegador vai ter margin e padding, estou resetando
+        o css padrão do navegador, usando o seletor universal, ele seleciona tudo */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/68c9706b-acd1-4472-bb1d-ef3ca933154c/e75d1650-32dd-4fc3-8e0f-93e254557b2c/BR-pt-20211011-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+            /* Ela se ajusta ao tamanho da tela */
+            background-size: cover;
+            /* Ele tenta se alinhar ao top e ao meio da tela */
+            background-position: top center;
+        }
+
+        #heading{
+            /* é assim que se usa cores: hexadecimal, ou em RGB ou RGBA, nesse caso é hexadecimal */
+            /* background: #e50914; */
+
+            /* Rgba- red, green, blue e alpha(ele mexe na opacidade) */
+            background: rgba(0,0,0,0.7);
+
+            /* falando que esse elemento tem um tipo de comportamento: display */
+            /*  
+            A partir do pai no caso esse cara, os elementos(as logos) no caso os filhos(quem esta baixo) 
+            dele se compartam de maneira diferente.
+
+            O display flex e grid serve pra criar colunas  
+            display: flex;
+
+            usando o tipo de justificação de conteudo between  
+            justify-content: space-between;
+
+            */
+        }
+
+        /* Toda div que estiver em heading aplica esses efeitos */
+        #heading div{
+            /* background-color: blue; */
+            /* Com isso não é mais necessario o display:flex; no heading, com isso estou alinha
+            por essa div dentro do heading*/
+            display: flex;
+            justify-content: space-between;
+            /* Eu falo aqui que a minha div tem 80% de largura do navegador*/
+            width: 90%;
+
+            /* Colocando margins automaticas, eu quero no margin top e baixo 0, o proximo valor é pra
+            direita e esquerda */
+            margin: 0 auto;
+        }
+
+        #heading .h1{
+            /* Isso aqui ja pegou aqui, então não precisa repetir no "a" */
+            font-size: 20px;
+            text-transform: uppercase;
+            /* color: #fff; a cor não pegou aqui */
+            
+            /* padding-top: 15px; 
+            padding-left: 15px;
+            padding-bottom: 15px;
+            Resumindo essa sintaxa com essa: ele pega 15 px pra direita, esquerda, baixo e top:
+
+            padding: 15px;
+             */
+             /* Agora se tudo não for 15px: topo, direita, baixo, esquerda isso é no sentido horario
+             topo: meio dia, direita:15 horas, baixo: 18 horas, esquerda: 21 horas:
+
+             padding: 15px 0 0 50px;
+             */
+             padding: 15px 0;
+        }
+
+        /* Quanto mais elementos eu tiver na minha sequencia, maior minhas especificidade e quanto maior
+        minha especificidade mais dificil é de mudar isso depois, muito cuidado com isso:
+         #heading h1 a{
+         }
+        por isso iremos pegar todo "a" dentro do "heading", estou pulando tags e falando se tiver algum a
+        dentro do heading aplica esse efeito, então eu pulo o h1 e pego o a, sendo assim todo a dentro do heading
+        ele aplica o efeito
+        */
+        #heading a{
+            /* A cor pegou aqui */
+            color: #fff;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Tentanto replicar a estrutura da netflix -->
+    <!-- O topo, cabeçalho -->
+    <header id="heading"> 
+        <!-- Essa div aqui so vai servir pra layout, com isso as duas logos não são mais filhas
+        diretas do heading e sim dessa div e quem é filho direto do meu header é essa div, com isso
+        o alinhamento feito acima é perdido -->
+        <div>
+            <!-- Logo da netflix -->
+            <h1 class="h1">
+                <a href="#">Netflix</a>
+            </h1>
+            
+            <!-- Aqui eu poderia usar outra caixa, nome, botão etc -->
+            <h2 class="h1">
+                <a href="#">Netflix</a>
+            </h2>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- usando css no proprio HTML(O que não é recomendavel) -->
+    <!-- Coloando largura(width) e altura(heigth) na div -->
+        <!-- Aplicando um fundo pra div aparecer -->
+        <!-- todos os elementos de uma pagina são retangulos, quadrados, circulos, criados na pagina
+        podendo colocar rentangulo dentro de outro retangulo dentro de outro, e cada um vai fazendo um espaço
+    pra cada objetivo e pra cada posicionamento que eu definir -->
+    <!-- de 120 de largura para 180, as divs de baixo se encaixam dentro dessa caixa aqui, então
+    essa caixa vermelha faz com que outras divs se encaixarem aqui, da maneira que eu quiser, é isso
+    que a gente faz quando esta montando uma pagina-->
+    <div style="width: 180px; height: 120px; background-color: red;">conteudo</div>
+    
+    <!-- Essa div acaba cobrindo a outra, pois elas são do mesmo tamanho-->
+    <!-- Mas mudando o tamanho dela da para ver a outra, agora ela é matade da outra -->
+    <div style="width: 60px; height: 60px; background-color: yellow; float: left;">conteudo</div>
+
+    <!-- Outra div que esta "dentro de outra div" -->
+    <div style="width: 60px; height: 60px; background-color: blue; float: left;">conteudo</div>
+
+    <!-- Ela acaba saindo fora da outra div pois, eu não falei como que elas devem se posicionar -->
+            <!-- E acontece que por padrão a elementos de estrutura e divs são caixas/containers então
+            eles tendem a quebrarem linhas, uma maneira de resolver é usando float que é uma maneira 
+        antiga, inseirndo float no yellow, no blue e no brown, posicionando, flutuando todos pra esquerda
+        o float so permite ir pra esquerda e direita, hoje existe o display flex e grid pra alinhar
+        os elementos, posicionar os elementos -->
+    <div style="width: 60px; height: 60px; background-color: brown; float: left;">conteudo</div>
+    
+    
+    <!-- Uma div com duas colunas, ocupando duas colunas -->
+    <div style="width: 120px; height: 60px; background-color: purple; float: left; text-align: center;">
+       <!-- Poderia ser outra caixa, ou um elemento qual quer dentro dessa caixa -->
+        <!-- Esse p por padrão ele tem um style, que é o padrão do navegador, tendo um margin 16, a gente
+        pode resetar esse margin, padding usando o seletor *{margin:0; padding:0;} no arquivo css
+        dessa forma a gente reseta todas as caixas, elementos -->
+        <p style="width:20px; height: 20px; background-color: darkcyan;"></p> 
+    
+    </div>
+
+    <!-- Se eu passar os pixels da caixa vermelha ela passa pra baixo, por isso colocamos 60px -->
+    <div style="width: 60px; height: 60px; background-color: turquoise; float: left;">conteudo</div>
+</body>
+</html>
