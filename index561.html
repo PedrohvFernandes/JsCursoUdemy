@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /* Resetando o css, usando o asterisco, pra resetar todo o css */
+        *{
+            margin:0;
+            padding: 0;
+            /* isso significa  que as bordas e padding vão ser usados no calculo da altura e largura do meu elemento
+            ou seja se eu adicionar o padding, ele não vai pra fora, ele não vai crescer o meu elemento, ele vai 
+            diminuir meu conteudo internamente, então ao inves desse padding ir para fora/encher para fora ele vai 
+            encher para dentro e a borda a mesma coisa, então se eu mandar que o meu elemento tenha 200px de largura
+            ele vai ter 200px de largura e assim vise versa, lembrando que é so padding e border que entra na soma
+            do border box, com isso eu sei o tamanho exato que o meu elemento vai ocupar na tela*/
+            box-sizing: border-box;
+        }
+
+        .section-one{
+            /* Agora a section ela tem uma largura de 200px */
+            width: 200px;
+
+            /* definido altura, como definir então não é mais auto(automatico) height: auto;, então se o
+            conteudo dentro da caixa for grande ou pequeno a altura vai ficar 150px 
+            */
+            height: 50px;
+
+            /* o background é um atalho do fundo do elemento, ja o background-color é especifico pra cor */
+            /* background-color: deeppink; */
+
+            background-image: url(https://image.shutterstock.com/image-vector/retro-flowers-all-over-print-600w-1238568625.jpg);
+
+            /* Se auto se ajusta ao tamanho da caixa o cover faz isso */
+            background-size: cover;
+
+            /* Se alinhar ao centro, do topo pra baixo ela fica no centro
+            e da esquerda pra direita ela fica no centro */
+            background-position: center center;
+
+            /* Trabalhando com a borda dessa section 
+            essa borda(border) ela tem que ter 5 px ela é solida(uma linha direta) e ela pode ter a cor black
+            dessa maneira aqui a borda acrescenta coisas nos nossos elementos por exemplo a caixa
+            é 200 de largura, então seria 205 pra esquerda, 205 pra direita, etc
+            */
+            /* border: 5px solid black; */
+
+            /* Como todos os espaços(border, padding, margin e conteudo) do box model tem 4 lados tem como configurar 
+            especificamente, por exemplo: border: 5px solid black; é uma sintaxe resumida */
+            
+            /* Aqui ja é especifico Configurando a parte de baixo(bottom) a largura dela, o estilo dela e a cor dela e 
+            eu poderia fazer isso pro top, left e rigth */
+            
+            /* TAMANHO DA BORDA DE BAIXO */
+            /* border-bottom-width: 10px; */
+            
+            /* AQUI É O TAMANHO PRA TODAS */
+            border-width: 10px;
+
+            /* pode fazer isso tambem, tudo aqui pode ser trabalhado de forma independente ou em conjunto*/
+            /* border-bottom-width: 100px; */
+
+            /* ESTILO DA BORDA DE BAIXO*/
+            /* border-bottom-style: solid; */
+            
+            /* AQUI É O ESTILO PRA TODAS, TRABALHANDO DE FORMA DE CONJUNTO*/
+            border-style: solid;
+            
+            /* A COR DA BORDA DE BAIXO, AQUI DE FORMA INDEPENDENTE*/
+            border-bottom-color: firebrick;
+
+            /* A COR DA BORDA DE CIMA, AQUI DE FORMA INDEPENDENTE */
+            border-top-color: yellow;
+
+            /* A COR DA BORDA DA DIREITA, AQUI DE FORMA INDEPENDENTE */
+            border-right-color: green;
+
+            /* A COR DA BORDA DA ESQUERDA, AQUI DE FORMA INDEPENDENTE */
+            border-left-color: blue;
+
+            /* OU EU PODERIA TER FEITO ISSO QUE APLICARIA PRA TODOS OS LADOS CASO TODAS FOREM DA MESMA COR
+            AQUI ESTA TRABALHANDO DE FORMA DE CONJUNTO
+            border-color: firebrick;
+            */
+
+
+            /* espaçamento interno, que é o inflamento do box model: */
+            /* padding: 15px; a gente quase não faz assim, dessa forma aplica o mesmo tamanho para todos os lados*/
+            /* Sempre no sentido horario: topo:15, direita:0, baixo:0 e esquerda:0 
+            padding: T D B E;
+            */
+            /* padding: 15px 0 0 0; */
+            
+            /* aqui é 15 px pra cima e pra baixo e 0 pra direita e esquerda */
+            /* padding: 15px 0; */
+            
+            /* Agora usando 3 propriedades, aqui foi configurado o topo 15px 0 pra esquerda e direita, e pra baixo 
+            10px*/
+            /* padding: 15px 0 10px; */
+            padding: 10px;
+
+
+            color: #fff;
+
+            /* So serve pra empurrar, e sim ela é a mesma coisa que a borda, padding e o conteudo possuindo 4 lados
+            TOPO DIREITA BAIXO ESQUERDA 
+            margin:T D B E;
+            ou uma sintaxe mais resumida: margin 150px;
+            */
+            margin:150px 0 0 0;
+
+
+        }
+
+        .section-two{
+            background: cyan;
+            /* Isso é tudo do box model */
+            width: 200px;
+            height: 50px;
+            border: 5px solid black;
+            padding: 15px;
+            /* Como aqui a margin é 20 px, então não é somada com a margin de cima dessa section com da margin de baixo 
+            outra section, pois a margin de baixo da outra section é 20px, pois a maior é usada, então se
+            aqui é 30px ou se a section de cima é 30px, então 30px de margin é o que prevaleceria */
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+<!-- https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model -->
+<!-- vendo na pratica como funcionar o box model -->
+
+    <!-- Toda section precisa de um cabeçalho/titulo h1...h6 pra não dar erro na hora de validar o documento -->
+        <!-- Por padrão a gente não tem uma definição de altura e nem de largura, so que por padrão 
+        ja configura esse elemento que é de seção que é uma box, ele configura esse elemento como um bloco e 
+        um bloco se você não especifica qual que é a largura desse bloco ele ocupa a largura inteira da tela
+        então o que eu tiver de tela ele ocupa pois ele é um bloco-->
+    <section class="section-one">
+        <!-- <h1>1</h1> -->
+        <!-- Iremos colocar um espaçamento interno(padding) nessa section, iremos encher o conteudo dentro da caixa pra 
+            que o texto não fique colado nas bordas da section -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </section>
+
+    <section class="section-two">
+        <h1>2</h1>
+
+    </section>
+
+
+</body>
+</html>
