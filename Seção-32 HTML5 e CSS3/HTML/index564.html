@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms formularios.1</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- O mais comum é ter uma section antes no forms, do que dentro do forms, mas pode ter tambem -->
+    <section>
+
+        <!-- https://www.w3schools.com/html/html_form_input_types.asp -->
+        <!-- https://developer.mozilla.org/pt-BR/docs/Learn/Forms/How_to_structure_a_web_form -->
+        <!-- O HTML form é escrito com a tag form ele é um bloco tambem
+            um bloco de conteudo que vai receber outros conteudos tambem, então ele é um display block-->
+    <!-- As tags de inputs por exemplo de botão, campos de texto, campos de marcação, etc funcionam melhor
+        com a tag forms, os inputs são os outros elementos que o forms recebe, alem de section, headings,
+        tag de agrupamento de campos:fieldset, ela serve pra agrupar campos de um formular, isso é mais pra formulario
+        a onde voce queira separar seus campos de acordo com cada objetivo, por emxplo um fieldser so pra
+        o usuario inserir dados pessoais, outro filedset pra marcar alguma coisa, etc ou seja agrupar
+    dados/campos que são relacionados, e colocar a tag <legend></legend> pra indicar o que aquele grupo
+    de campos faz, especificando o que são esses campos, isso é bom pra sw que ler a tela, obvio
+    que pode usar P, span, etc-->
+        <!-- Não pode alinhar um form dentro de outro form, pois pode bugar o navegador -->
+        <!-- O action do forms é pra falar pra onde eu vou mandar esse formulario, pode ser uma url
+            pra mesma pagina, pro banco de dados com  algum arquivo dentro do meu proprio sistema-->
+            <!-- O method que é o metodo do form pode ser get, post, etc, mas o get e post são os mais utilzados
+                por padrão a gente coloca get os campos que estiverem dentro desse formulario vão ser 
+            atrelados a url com parametros de urls
+            -->
+            <!-- o target -> quando eu enviar o forms, mas que ele recarregue essa propria pagina ou
+                quero mandar pra outra pagina-->
+                <!-- o autocomplete é para autocompletar os campos desse forms, são aquelas palavras sugeridas
+            no campo que foram digitadas em outros campos do mesmo type anteriormente-->
+    <form action="#" method="get" target="_blank" autocomplete="off">
+        
+        <h1>Cabeça</h1>
+            <p>O formulario</p>
+            <!-- Um grupo de campos -->
+            <fieldset>
+                <legend>Descrição</legend>
+                <p>
+                    <input type="text">
+                </p>
+            </fieldset>
+        </section>
+    </form>
+</body>
+</html>
