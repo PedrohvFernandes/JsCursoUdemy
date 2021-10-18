@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas e menus</title>
+
+    <style>
+        *{
+            /* Reset estilo navegador */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav{
+            background-color: red;
+
+            /* Se voce não define uma largura pra um elemento que tem como display block que é um bloco
+            se isso é um bloco, ele vai ser comportar  como um bloco, ele vai tender a quebrar linha e se não colocar
+            nenhuma largura pra ele ele vai ocupar a tela inteira*/
+            /* width: ; */
+
+            /* Iremos deixar a altura automatica, fazendo com o link empurre ela
+            de acordo com o tamanho do link usando o link como display block, porque o o block empurra
+            outros elementos*/
+            /* height: 50px; */
+        }
+
+        /* Poderia pegar o caminho completo, o bom do especifico é isso, mas acaba que fica complexo, pois
+        acaba tendo muita especificidade, fica mais dificil de alterar
+        body nav ul li a{
+
+        }
+
+        ja o não especifico ele é mais facil de arrumar e entender, so que todo "a" dentro de uma "nav" vai
+        aplicar essa config
+        */
+        nav a{
+            /* Cor hexadecimal: ff-> red  ff-> green ff-> blue -> o f quer dizer a cor maxima
+            color:#ff0000; -> red
+            color:#00ff00; -> green
+            color:#0000ff; -> blue
+            color:#00f; -> blue -> como o 0 repeti mais algumas vezes então não tem necessidade de colocar mais zeros
+            color:#ffffff; -> branco
+            color:#fff; -> branco -> se todo o restante repetir de acordo com as 3 primeiras
+            letras e numeros do hexadecimal então basta colocar so tres 
+            */
+            color:#fff;
+            /* Tira a declaração de texto */
+            text-decoration: none;
+
+            /* Essa fonte pega todas as fontes dos sistemas operaconais */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            /* um margin de 10px pra cada um dos links */
+            /* margin-left: 10px; */
+
+            /* um espaçamento interno */
+            padding: 10px 20px;
+
+            /* Com o display block ele vai empurrar a nav de acordo com o tamanho, margens e paddings que eu colocar no link agora*/
+            display: block;
+
+            text-transform: uppercase;
+        }
+
+        /* o hover é uma pseudo class do css, ela serve pra ações do mouse sobre algum elemento,
+        ou seja passar o mouse/que é o hover em ingles*/
+        nav a:hover{
+            
+            /* o RGBA é red green blue e aplha que é a opacidade(deixa o preto transparente)
+            quando o red green e blue são 0 tudo fica sem cor, tudo preto, cor neutra */
+            /* background-color: rgba(0,0,0,0.5); */
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        /* Vamos alinhar os items */
+        nav{
+            display: flex;
+
+            /* ele justifica a ul ao centro e não no meio da nav e sim no meio da linha em que
+            se encontra a linha*/
+            /* justify-content: center; */
+
+            /* ele alinha a ul o elemento ao centro da nav, ele coloca no meio, ele pega a linha e coloca
+            no centro de tudo, no meio de tudo */
+            align-items: center;
+        }
+        nav ul{
+            /* eu falei pra ul ter esse display flex, significa que todos os filhos dela vão ficar 
+            alinhados em linhas, mas os filhos delas continua com o display block, que é o display padrão*/
+            display: flex;
+            
+            /* Aqui eu mudo a direção de como o flex pode organizar os elementos -> o reverso da linha
+            (row-reverse), pode ser coluna(column) ou coluna inversas(column-reverse) e o proprio row que 
+            é o padrão do display flex */
+            /* flex-direction: row; */
+
+
+            /* Tirando a bolinha da lista */
+            list-style: none;
+
+            background-color: red;
+
+            /* Aqui a gente da uma afastada do canto esquerdo pra borda respirar, mas a gente vai fazer
+            isso no "a" assim todos "a" ganham um espaçamento de 10px e não so a ul*/
+            /* margin-left:10px; */
+
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- Fazendo o menu -->
+    <nav>
+        <ul>
+            <!-- Os li por padrão vem de cima pra baixo no navegador-->
+            <li> 
+                <!-- Toda "a" dentro de qual quer elemento, o sumblinhado do link vai prevalecer e a cor tambem sobre o elemento-->
+                    <!-- O "a" é um elemento geralmente inline e não um block, ele não quebra
+                    e não ocupa a largura do elemento, não empurra os elementos do lado dele e não costuma 
+                    a pegar estilos tipo largura altura, mas é possivel mudar o display dele-->
+                    <!-- Elemento inline é somente o conteudo dele não tem altura nem nada, então ele
+                    não empurra outros elementos, por isso colocamos o "a" como display block e a nav
+                    com altura automatica pra que ela se adapte com a altura, margens e paddings do "a"
+                    porque agora o "a" é um display block e ele vai empurrar a nav de acordo com o que a 
+                    gente aplicar nele-->
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About-me</a>
+            </li>
+            <li>
+                <a href="#">Products</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+    <!-- https://www.w3schools.com/html/html_lists.asp  -->
+    <!-- A gente tem tres tipos de listas: UL, OL ambos recebem o list item o item da lista e DL que recebe
+    o termo que vai ser descrito e a descrção do termo-->
+
+    <!-- A gente tem a UL que é a lista não ordenada, não existe nem um tipo de ordem,
+        dentro das listas a gente usa o list item -> <li> que são items das listas
+        ela é a mais utilizada para menus de navegação-->
+    <ul>
+        <li>Item 2</li>
+        <li>Item 1</li>
+        <li>Item 3</li>
+    </ul>
+
+    <!-- A lista OL que é a lista ordenada, a gente pode colocar o atributo type pra mudar
+    a forma de ordenar os items, se é numero, em letras, etc 
+    o atributo start fala de qual a lista vai começar-->
+    <ol type="A" start="20">
+        <li>Item 2</li>
+        <li>Item 1</li>
+        <li>Item 3</li>
+    </ol>
+
+    <!-- E a lista dl a lista de items de termos -> <dt> é o termo, com a descrição -> <dd> é a descrição
+         de cada um desses termos  -->
+    <dl>
+        <!-- Items -->
+        <dt>Café</dt>
+        <!-- Descrição do item -->
+        <dd>bebida preta quente</dd>
+
+        <dt>Café</dt>
+        <dd>bebida preta quente</dd>
+    </dl>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+.Code runner essa extensão é a que faz a ponte para clicar no botão de play e ele já utiliza o node para executar o arquivo js
+
+
+.Transpilar significa converter um código fonte em outro por meio de um processo de compilação, ou seja, o programador escreve o código fonte em uma linguagem que após ser compilada gerará um código equivalente em outra linguagem.a transpilação é uma tradução, no fundo a transpilação é uma especialização da compilação. Todo o processo é feito igualzinho o que o compilador faz, a diferença é apenas que no compilador tradicional o alvo é um código de mais baixo nível, provavelmente alguma forma de Assembly ou código de máquina, enquanto que o transpilador tem como alvo um código fonte de uma linguagem de alto nível diferente ou a mesma escrita de outra forma.
+
+É usado pelo CoffeeScript, TypeScript e o próprio JavaScript para compatibilizar versões, só para citar os casos mais óbvios do JavaScript. Tem muita linguagem que gera um fonte em C em vez de gerar um código de baixo nível. Seria uma conversão de uma linguagem para outra.
+
+Quando, por exemplo, você programa em TypeScript, é necessário um transpiler para convertê-lo em Javascript.
+
+.Back-end(Geralmente rodando com o nodeJS) é o seu servidor de resposta, é o seu servidor que vai suprir dados para o front-end, e o front-end(Geralmente o navegador ou interface mesmo UI) é basicamente o navegador que a gente vê na tela, que é um botão que voce clica , um formulário que voce preenche
+
+.DOOM é na parte de front-end e o node na parte do back-end
+
+.Live server outra extensão-Ativa um servidor de uma determinada porta do meu computador, por exemplo:127.0.0.1:5550"Nome do arquivo que ele ta lendo.html", 127.0.0.1(Local host) 5550(Porta)
+
+
+.Html é um arquivo que vai marcar no navegador na onde que vai estar cada um dos elementos, qual quer vai ser a semântica da pagina
+
+.Html-basicamente é um arquivo de texto que um navegador utiliza pra renderizar coisas na pagina, toda pagina do navegador ta executando Html, Css e Js
