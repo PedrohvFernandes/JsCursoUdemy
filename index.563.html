@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas HTML</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        /* Tirando um espaçamento que tem entre as colunas */
+        table{
+            /* Faz com que une as bordas dos elementos dentro da tag table nesse caso*/
+            border-collapse: collapse;
+            /* Uma tabela larga, maior que a tela de celular */
+            width: 800px;
+        }
+        /* Selecionando todas as td e th das tables */
+        table td, table th{
+            /* So pra ver a tabela delineada aqui */
+            border: 1px solid #ccc;
+            /* So um espaçamento interno */
+            padding: 5px;
+
+            /* Pra todos ficarem alinhados a esquerda tanto o titulo como corpo*/
+            text-align: left;
+        }
+
+        /* Eu posso falar a onde a descrição pode aparecer */
+        table caption{
+            /* Essa propriedade define a onde a minha descrição devem ficar */
+            caption-side: bottom;
+            /* Aqui eu falo se ela fica no meio, pra direita, esquerda */
+            text-align: right;
+
+            font-style: italic;
+
+            font-size: 14px;
+
+            /* Margin pro topo e pra baixo*/
+            margin: 5px 0;
+        }
+
+        tfoot td, table th{
+            background-color: #ddd;
+        }
+        tfoot td{
+            font-style: italic;
+        }
+
+        .responsive-table{
+            /* Overflow é quando o elemento passa do flow normal do seu conteudo, por exemplo
+            eu tenho um conteudo que de largura de 200px e ai o conteudo passou pro lado que seria
+            o eixo x, ou seja passou pra lateral horizontalmente, e vertical é y overflow-y. o Auto é
+            de automatico, então tudo que passar da tela, do eixo x é automatico, assim a gente tem 
+            scroll na div e não no site inteiro, é como se fosse um frame*/
+            overflow-x: auto;
+
+            /* falando pra div  ter a largura maxima da tela que é 100%
+            pode ser o width ou max-width*/
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit.</p>
+
+    <!-- Pra alinhar a tabela para deixar ela responsiva, pois é muito dificil deixar ela
+        responsiva, ainda mais se tiver alguma coluna com muitos textos, com isso iremos
+        usar uma div, pra que a pessoa consiga rola a tabela pro lado com o ddo, pra ver a tabela 
+        inteira-->
+    <div class="responsive-table">  
+        <!-- Pra criar tabelas no HTML a gente usa a tag <table> -->
+            <!-- Essa tag table recebe coisas que são parecidas com semantica do site:
+                cabeçalho, corpo, footer(rodape) então essas seções dentro da tabela
+                são chamadas de thead, tbody, tfooter, obs: pode fazer a tabela sem essas separações
+            porque o navegador faz isso pra mim-->
+            <table>
+        <!-- eu posso colocar uma caption na tabela,que é uma descrição pra essa tabela, titulo pra tabela 
+        -->
+        <caption>Uma descrição para a tabela</caption>
+        
+        <!-- o cabeçalho da minha tabela -->
+        <thead>
+            <!-- pra linha eu uso a tag tr -->
+            <tr>
+                <!-- pra colunas eu uso as tags td ou th, como estou falando
+                    de thead eu vou colocar th aqui, seria o meu titulo-->
+                <th>Titulo 1</th>
+                <!-- Eu posso ter varias colunas, so que eu preciso ser coerente com as minhas colunas -->
+                <th>Titulo 2</th>
+                <th>Titulo 3</th>
+            </tr>
+        </thead>
+        
+        <!-- O corpo da minha tabela: ele recebe a mesma coisa que o de cima: o tr: a linha e td: as 
+            colunas -->
+        <tbody>
+            <tr>
+                <!-- pro tbody a gente esta usando o td pra fazer as colunas dentro do corpo -->
+                <!-- Se no header tem 3 colunas, aqui tem que ter 3 colunas tambem -->
+                <td>Corpo 1 Corpo 1 Corpo 1 Corpo 1 Corpo 1</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+            <!-- colocando mais duas linhas no corpo da minha tabela -->
+            
+            <tr>
+                <!-- Fazendo que uma linha ocupe mais de uma coluna, no caso a coluna
+                corpo 2 e 3 usando o atributo colspan que faz ocupar horizontalmente e falo quantos 
+                colunas essa celula vai ocupar, por enquanto ela ocupa 2 colspan="2" e isso não quebra 
+                nossa tabela, pois a primeira coluna esta ocupando duas colunas/espaços-->
+                <!-- Ela pode ocupar as 3 colunas/espaços colspan="3" -->
+                <!-- Fazendo ela ocupar 2 linhas de baixo rowspan ="2" 
+                    <td colspan="2" rowspan="2">AQUI</td>esse atributo faz
+                    com que a coluna ocupe horizontalmente-->
+                    <td colspan="2">AQUI</td>
+                    <!-- <td>Corpo 2</td> -->
+                    <td>Corpo 3</td> 
+                </tr>
+                
+                <tr>
+                    <!-- A coluna de cima ocupou duas colunas da linha de baixo no caso essa linha aqui 
+                        e as duas colunas corpo 1 e corpo 2 com a propriedade rowspan que faz ocupar verticalmente 
+                    -->
+                    <td>Corpo 1</td>
+                    <td>Corpo 2</td>
+                    <td>Corpo 3</td>
+                </tr>
+            </tbody>
+            <!-- Pro tfoot é a mesma coisa, a gente precisa de uma linha e de colunas-->
+            <tfoot>
+                <tr>
+                    <!-- Ele vai ocupar 2 colunas, porque não quero valor aqui-->
+                    <td colspan="2" rowspan="2"></td>
+                    <!-- <td>Rodape 2</td> -->
+                    
+                    <!-- Deixar um total aqui -->
+                    <td>TOTAL:</td>
+                </tr>
+                <tr>
+                    <!-- <td colspan="2"></td> -->
+                    <!-- <td>Rodape 2</td> -->
+                    
+                    <!-- Deixar o preço aqui -->
+                    <td>R$555</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
