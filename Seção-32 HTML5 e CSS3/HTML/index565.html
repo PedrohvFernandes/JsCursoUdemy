@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms formularios.2 campos</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        label{
+            /* Pra falar que o label é clicavel */
+            cursor: pointer;
+            /* O ultimo label e penultimo eles estão em cima do input e fora dele, com isso da pra fazer ele se
+            tornar um display block pra que ele quebre a linha e passe o input pra baixo */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get" target="_blank" autocomplete="off">
+        <p>O meu formulario</p>
+        <!-- Agora a gente começa ver campos do forms -->
+        <!-- Campo pra nome de uma pessoa, eu uso um campo de texto, pois eu não tenho campo especifico
+        para nomes-->
+        <!-- A partir do type o campo se comporta daquela maneira, seja texto, pasword, data, etc -->
+        <!-- O Id do input é pra que geralmente  a gente vai querer colocar ids nos nossos inputs pra a gente
+        linkar o texto que a gente ta escrevendo, texto referente aquele input, com aquele input em si-->
+        <!-- Em seguida o name, esse name vai ser mais usado no back-end, então quando voce enviar esse forms
+        voce vai receber esses dados e voce vai ter uma chave o que que é esse valor enviado, então eu
+        vou saber o que o usario digitou no meu campo com o nome "nome" que é o nome do usuario
+        Alem disso o id e o name servem como seletores alem da classe que pode ser colocada nos inputs-->
+        <!-- O placeholde faz parte da semantica e do visual, pois é aquela frase que aparece no fundo
+        do campo o que o usuario deve digitar-->
+        <!-- Value: é o valor do input, todos os inputs tem algum tipo de valor, e esse valor é que
+        vai chegar junto com o name la no servidor, então se o meu value nesse caso tiver value="pedro henrique" quando enviar 
+        o forms, no meu servidor eu recebo atributo nome falando que isso é um nome e fala o valor que veio
+        pra nome, o value é um valor padrão que ja vem no input, mas que a pessoa pode editar mas é claro
+        que não é preciso desse value-->
+        <!-- Eu posso controlar se o input fica disabilitado ou não passando o atributo disabled, ae com js
+        fazendo uma função de quando liberar o input, tem o required, readonly, etc-->
+        <p>Digite seu nome
+            <input type="text" id="nome" name="nome" placeholder="Digite seu Nome Completo">
+        </p>
+
+        <!-- Usando o label -->
+        <p>
+            <!-- O label a gente pode envolver o label no input porque ao clicar no label ele abre o input
+            ou deixar o label pra fora mesmo que ae o input não abre ao clicar no label -->
+            <label>
+                Nome:
+                <input type="text" id="nome" name="nome" placeholder="Digite seu Nome Completo">
+            </label>
+        </p>
+
+        <p>
+            <!-- Pode fazer assim: o label pra fora que o label não vai pegar ao clicar nele, ele so vai
+            ser um titulo-->
+            <label>Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu Nome Completo">
+        </p>
+
+        <p>
+            <!-- Pode fazer assim: Mas dessa forma ele se torna clicavel mesmo pra fora do input-->
+            <label for="nome-teste">Nome:</label>
+            <input type="text" id="nome-teste" name="nome" placeholder="Digite seu Nome Completo">
+        </p>
+
+        <!-- Outros tipos/types de inputs -->
+
+        <!-- Pra marcar uma caixinha -->
+        <p>
+            <label for="dev">Sou um dev</label>
+            <!-- Se a pessoa marcar o valor vai como sim pra no servidor pro atributo do nome "dev" -->
+            <!-- Posso falar que ele ja vem marcado por padrão checked, pode deixar ele como requisitado -> required -->
+            <input type="checkbox" id="dev" name="dev" value="sim" checked>
+
+            <label for="dev1">Sou um dev1</label>
+            <input type="checkbox" id="dev1" name="dev1" value="sim" checked>
+            <label for="dev2">Sou um dev2</label>
+            <input type="checkbox" id="dev2" name="dev2" value="sim" checked>
+            <label for="dev3">Sou um dev3</label>
+            <input type="checkbox" id="dev3" name="dev3" value="sim" checked>
+            <label for="dev4">Sou um dev4</label>
+            <input type="checkbox" id="dev4" name="dev4" value="sim" checked>
+        </p>
+
+        <!-- Temos o radio que tipo checkbox, a diferença é que nele so pode marcar um -->
+        <!-- Pra que de certo de so um ser marcado o name tem que ser igual pra todos -->
+        <p>
+            Gênero:
+            <label for="feminino">Feminino</label>
+            <!-- Falando que esse ja vem selecionado por padrão -->
+            <input type="radio" id="feminino" name="genero" value="feminino" checked>
+
+            <label for="dev-genero1">Masculino</label>
+            <input type="radio" id="dev-genero1" name="genero" value="masculino">
+            
+            <label for="dev-genero2">Homosexual</label>
+            <input type="radio" id="dev-genero2" name="genero" value="homosexual"> 
+            
+            <label for="dev-genero3">Trans</label>
+            <input type="radio" id="dev-genero3" name="genero" value="trans">
+            
+            <label for="dev-genero4">Outro</label>
+            <input type="radio" id="dev-genero4" name="genero" value="outro">
+        </p>
+
+        <p>
+            <!-- Tenho tres tipos de botão, botão que é um botão normal e pode usar o js pra fazer o que quiser com ele
+            e os dois importantes que estão dentro do forms é o reset e o submit-->
+            <!-- Lembrando que eu posso colocar button fora de forms que seja so pra alguma coisa -->
+            <!-- Esse é submit ele envia o forms pra algum canto, depende do forms no atributo action="#"-->
+            <button type="submit">Enviar</button>
+
+            <!-- Ele reseta os campos do forms, para os valores padrões, no caso se tiver um value
+            nos campos então ele voltar por value padrão e se não tiver value ele apaga tudo dos campos -->
+            <button type="reset">Resetar</button>
+        </p>
+    </form>
+</body>
+</html>
