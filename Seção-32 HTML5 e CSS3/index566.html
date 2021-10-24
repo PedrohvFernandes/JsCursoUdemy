@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms formularios.3 campos</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        label{
+            cursor: pointer;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get" target="_blank" autocomplete="off">
+        <p>O meu formulario</p>
+        <p>Digite seu nome
+            <input type="text" id="nome" name="nome" placeholder="Digite seu Nome Completo">
+        </p>
+
+        <p>
+            <label>
+                Nome:
+                <input type="text" id="nome" name="nome" placeholder="Digite seu Nome Completo">
+            </label>
+        </p>
+
+        <p>
+            <label>Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu Nome Completo">
+        </p>
+
+        <p>
+            <label for="nome-teste">Nome:</label>
+            <input type="text" id="nome-teste" name="nome" placeholder="Digite seu Nome Completo">
+        </p>
+
+        <p>
+            <label for="dev">Sou um dev</label>
+            <input type="checkbox" id="dev" name="dev" value="sim" checked>
+            <label for="dev1">Sou um dev1</label>
+            <input type="checkbox" id="dev1" name="dev1" value="sim" >
+            <label for="dev2">Sou um dev2</label>
+            <input type="checkbox" id="dev2" name="dev2" value="sim" >
+            <label for="dev3">Sou um dev3</label>
+            <input type="checkbox" id="dev3" name="dev3" value="sim" >
+            <label for="dev4">Sou um dev4</label>
+            <input type="checkbox" id="dev4" name="dev4" value="sim" >
+        </p>
+        <p>
+            Gênero:
+            <label for="feminino">Feminino</label>
+            <!-- Falando que esse ja vem selecionado por padrão -->
+            <input type="radio" id="feminino" name="genero" value="feminino" checked>
+
+            <label for="dev-genero1">Masculino</label>
+            <input type="radio" id="dev-genero1" name="genero" value="masculino">
+            
+            <label for="dev-genero2">Homosexual</label>
+            <input type="radio" id="dev-genero2" name="genero" value="homosexual"> 
+            
+            <label for="dev-genero3">Trans</label>
+            <input type="radio" id="dev-genero3" name="genero" value="trans">
+            
+            <label for="dev-genero4">Outro</label>
+            <input type="radio" id="dev-genero4" name="genero" value="outro">
+        </p>
+
+
+        <!-- Input com data agora e com data padrão no caso o valor padrão dela-->
+        <p>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" value="2020-04-20">
+        </p>
+
+        <!-- Input com data e hora agora, no navegador ele fica tipo como campo de texto
+        isso significa que o navegador não suporta ele-->
+        <p>
+            <label for="datetime">Date time:</label>
+            <input type="datetime" id="datetime" name="datetime" value="2020-04-20">
+        </p>
+
+        <!-- Input com data e hora local agora, no navegador ele suporta
+        Como ela é uma data especifica que tem tempo, no valor a gente coloca um T de tempo-->
+        <p>
+            <label for="datetime-local">Date time local:</label>
+            <input type="datetime-local" id="datetime-local" name="datetime-local" value="2020-04-20T20:00">
+        </p>
+
+        <!-- Tem o input de time de hora: hora:minutos:segundos -->
+        <p>
+            <label for="time">Time: </label>
+            <input type="time" id="time" name="time" value="20:00:01">
+        </p>
+
+        <!-- Tem o input do tipo cor, com o valor padrão red em hexadecimal -->
+        <p>
+            <label for="color">Cor preferida: </label>
+            <input type="color" id="color" name="color" value="#FF0000">
+        </p>
+
+        <!-- Tem o input de email, que ja faz uma mini validação fraca -->
+        <p>
+            <label for="email">Seu email: </label>
+            <input type="email" id="email" name="email" placeholder="Digite seu Email">
+        </p>
+
+        <!-- Tem o input de arquivo, que eu passo o accept a onde eu permito so
+        os tipos de arquivos que eu quero, uma mini validação, porque é no back-end que a gente checa 
+        se esta tudo correto 
+        image/* -> é imagens all tudo que for de imagem ele aceita
+        o multiple me permite selecionar varios arquivos segurando shift-->
+        <p>
+            <label for="file">Sua foto: </label>
+            <input type="file" id="file" name="file" placeholder="Coloque sua foto"
+            accept=".png, .jpg, .svg, image/*" multiple>
+        </p>
+
+        <!-- Tem o input de numero
+        o step fala de quanto em quanto ele vai pulando de numero -->
+        <p>
+            <label for="number">Digite um numero: </label>
+            <input type="number" id="number" name="number" placeholder="Digite um numero"
+            min="10" max="50" step="5">
+        </p>
+
+        <p>
+            <button type="submit">Enviar</button>
+            <button type="reset">Resetar</button>
+        </p>
+    </form>
+</body>
+</html>
