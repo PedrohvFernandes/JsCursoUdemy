@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Separando HTML e CSS em arquivos diferentes</title>
+
+    <!-- Terceira maneira de usar o css: linkando esse arquivo HTML com arquivo css -->
+    <!-- A gente pode carregar os estilos por links: de outra pagina, bibliotecas e frameworks
+    tipo o bootstrap -->
+    <!-- Ou a gente pode carregar da meneira que seja relativo, o meu index568 ta na pasta
+    index568 e o meu css dentro de assets/css/styles.css-->
+    <!-- Se não conseguir acessar de maneira relativa, pode acessar assim -> ./ssets/css/styles.css
+    o ponto barra -> ./ é a mesma coisa que falar nessa pasta aqui mesmo que esse html esta
+    pra frente tem o arquivo css, é porque as vezes alguns servidores  pode simular que o arquivo html
+    pode simular em algum lugar diferente e acabar não achando o arquvio css-->
+    <!-- Lembrando que posso dividir o arquivo css em varios aquivos css que eu quiser -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Quem vai aplicar no css é sempre a ultima regra que o navegador viu
+    então se eu mudar ele pra cima o yellow que ta aqui dentro não aparece-->
+    <link rel="stylesheet" href="assets/css/exemplo.css">
+
+
+    <!-- Primeira maneira de usar o css -->
+    <!-- <style>
+
+        /* Selecionando a tag div com a class caixa */
+        .caixa{
+            background-color: red;
+            height: 120px;
+            width: 120px;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- Sempre for usar CSS, sempre optar por seletor class
+    e o seletor Id é pro JS-->
+    <div class="caixa"></div>
+
+    <!-- Segunda maneira de usar o css com o atributo style -->
+    <!-- <p style=" background-color: red;height: 120px; width: 120px;">Ola segunda maneira de aplicar css, na propria tag que é o seletor que domina tudo
+        que é o seletor por tag
+    </p> -->
+</body>
+</html>
