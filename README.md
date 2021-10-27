@@ -10,3 +10,5 @@ O curso conta com mais de 73,5 horas de vídeo sob demanda, aborda introdução 
 
 ##### Seção 32: HTML5 e CSS3 (Para iniciantes): 🕗
 
+# Projetos do curso
+
