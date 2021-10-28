@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Isso que faz as divs herdarem aqui no caso uma cor da outra  
+div{
+    color: inherit
+} */
+
+/* Dessa forma a div filha do pai vai ter a cor inicial dela, então ela não herda o estilo do pai */
+div{
+    color: initial;
+    margin-left: 20px;
+}
+
+.pai{
+    color: red;
+}
+
+
+/* De forma dependente, selecionando a filha, uma filha dentro do pai  */
+.pai2 .filha2{
+    color:red;
+}
+
+/* De forma colada: Não acontece nada, porque esse elemento que eu estou selecionando tem que ter a classe pai e filha
+então se a filha tiver a classe pai algo acontece com a filha, porque agora ela possui as duas classes*/
+
+.pai3.filha3{
+    color: red;
+}
+
+/* Seletores direto, selecionando so o filho da div e não a filha da filha */
+    /* Selecionando a filha direta do pai usando o seletor > esse seletor é o chield selector
+    então é a filha que esta diretamente no pai e não a filha da filha*/
+.pai4 > .filha4{
+    color: red;
+}
+
+/* Selecionando a filha da filha, no caso a filha do pai que tem uma outra filha*/
+.pai5 > .filha5 > .filha5{
+    color: red;
+}

@@ -1,0 +1,31 @@
+/* Primeiro seletor All/tudo/universal 
+Você seleciona todos os elementos da pagina
+é mais utilizado pra resetar o css padrão do navegador*/
+    
+*{
+    /* Se eu fizer um border, todos os elementos da pagina vão ficar com esse estilo de borda */
+    /* border: 1px solid red; */
+    /* Zerar o css/resetar, nem um elemento tera por padrão margin e padding do navegador */
+    margin: 0;
+    padding: 0;
+}
+
+/* Seletor de tag, ele seleciona tudo que for de acordo com a tag selecionada, ele é o seletor de alto nivel */
+    /* Selecionando todas as tag p e h1 do html, mas que não estejam no seletor descendente */
+         /* Apos a virgula a gente realiza outra sequencia, agora pro h1 */
+h1, p{
+    color: blueviolet;
+}
+
+/* Seletor por hierarquia/descendente é mais forte que so utilizar a tag */
+    /* O body é pai da div, a div é pai da section e section é pai do p 
+    todo p que esta dentro de uma section, que esta dentro de uma div que esta dentro de um body é pra aplicar esse
+    estilo, então estamos selecionado o p que é o ultimo elemento, então todos os p que esta dentro da section de acordo
+    com essa sequencia */
+        /* Apos a virgula a gente realiza outra sequencia, agora pro h1 */
+            /* A descendencia e a virgula eu posso utilizar não so com tags, mas tambem com classes e id ou tags com id e class
+            ou tag com classe, ou tag com id */       
+body div section p, 
+body div section h1{
+    color: red;
+}
