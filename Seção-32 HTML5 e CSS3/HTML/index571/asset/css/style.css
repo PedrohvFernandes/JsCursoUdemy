@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+/* Seletor Adjacent sibling combinator https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator é por nivel
+um elemento apos outro elemento*/
+/* Selecionando todo p que é irmão de h1 e que vem depois de um h1 */
+    /* Para o elemento que tem a classe pai e voce encontra um p que vem depois de um h1 */
+.pai h1+p{
+    color:red;
+}
+
+
+/* Um h1 logo depois de um p */
+.pai p+h1{
+    color:yellow;
+}
+
+
+/* Seletor General sibling selectors https://developer.mozilla.org/pt-BR/docs/Web/CSS/General_sibling_combinator*/
+/* Todos os p que estiverem apos a h1 */
+.pai2 h1~p{
+    color:red;
+}
+
+/* Funciona com class */
+/* Selecionando todos as classe dois depois da classe 1 */
+/* .pai3 .um~.dois{
+    color:red;
+} */
+
+.pai3 .um + .dois{
+    color:red;
+}
