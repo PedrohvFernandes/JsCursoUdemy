@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Somente o nome doa tributo ja seleciona */
+[meu-atributo]{
+    color: red;
+}
+
+/* Mas é muito mais especifico e muito melhor trabalhar com valores, isso funciona para o meus 
+atributos e para os atributos padrão do html */
+
+[meu-atributo = "valor"]{
+    color: red;
+}
+
+/* Selecionar pelo menos os valores que eu tiver
+no meu atribuo, nesse caso o valor 2 */
+[meu-atributo~= "valor2"]{
+    color: red;
+}
+
+/* Esse seletor requer que a palavar que voce esta buscando aqui
+seja seguida por um traço poderia ser qualquercoisa, contando
+que venha no atributo, seguido de um traço  e que venha no começo do atributo,
+no caso como primeiro valor do atributo*/
+[meu-atributo|= "valor"]{
+    color: red;
+}
+
+/* Esse é para selecionar com o que começou */
+[meu-atributo^= "comecou"]{
+    color: red;
+}
+
+/* Da pra fazer assim tambem: que ele vai selecionar o elemento que tenha um valor que começe com essa letra " c " no caso
+o comecou*/
+/* [meu-atributo^= "c"]{
+    color: red;
+} */
+
+/* Esse ja é o termina com */
+[meu-atributo$= "la"]{
+    color: red;
+}
+
+/* Esse ja é o de contem: se contem tal letra ou palavar ele seleciona */
+[meu-atributo$= "d e"]{
+    color: red;
+}
