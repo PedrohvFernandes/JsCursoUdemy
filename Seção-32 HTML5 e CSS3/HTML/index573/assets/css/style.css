@@ -1,0 +1,76 @@
+/* Pseudo classes: https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Fazendo uma transição pra mostrar o efeito devagar */
+    /* Toda transição que o ocorrer, toda classe que mudar, toda propriedade que mudar desse elemento  
+    eu quero que aconteça um efeito*/
+        /* Ele usa a transição pra mostrar como que essa transição ocorre*/
+.heading{
+    /* Transitio: todas | quanto tempo que eu quero | como eu quero que esse feito ocorra*/
+    /* O tempo pode ser em mili segundos(ms -> 300ms ) ou em segundos */
+    transition: all 1s ease-in-out;
+}
+/* Passar mouse sobre um elemento e ele mudar, aplicar algum estilo pra ele*/
+    /* A pseudo class vem depois dos dois pontos :  */
+        /* A pseudo classe hover é quando o mouse esta sobre o elemento */
+.heading:hover{
+    background-color: red;
+}
+
+/* Configurando todos os links */
+
+a{
+    color: darkorange;
+}
+
+/* Configurando links para que os que não foram e foram visitados  */
+/* Usando a pseudo classe link, isso quer dizer que nunca visitei */
+a:link{
+    color: deeppink;
+}
+
+/* Nos que foram visitados */
+a:visited{
+    color: firebrick;
+}
+
+/* Quando passar sobre esses links eles vão ficar de cor branca, com fundo azul e sem a linha em baixo */
+a:hover{
+    background-color: darkblue;
+    color: white;
+    text-decoration: none;
+}
+
+/* Essa indica que o elemento foi clicado, que o elemento esta ativo nesse momento */
+a:active{
+    background-color: darkslategray;
+    color: white;
+    text-decoration: none;
+}
+
+/* Adicionar foco em elemento do tipo input, botões, etc */
+
+input:focus{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 1px solid black;
+}
+
+/* Quando o input tiver desabilitado */
+input:disabled{
+    background-color: aqua;
+    cursor: not-allowed;
+}
+/* para inputs Ativo */
+input:enabled{
+    background-color: red;
+    cursor: pointer;
+}
+
+/* Para o checkbox: quando o checkbox esta marcado o p muda para background vermelho, isso é utilizado para menus */
+.manipulador:checked + p{
+    background-color: red;
+}

@@ -1,0 +1,20 @@
+/* Selecionando todos os li da lista os items da lista*/
+.pai .lista li{
+    background-color: red;
+}
+
+/* Selecionando o primeiro filho da lista */
+.pai .lista li:first-child{
+    background-color: aqua;
+}
+
+/* Selecionando o ultimo filho da lista */
+.pai .lista li:last-child{
+    background-color:blueviolet;
+}
+
+/* Todo input requerido */
+    /* Então eu posso mudar o estilo do meu elemento de acordo com estado com que ele se encotra  */
+input:required{
+    background-color: red;
+}
