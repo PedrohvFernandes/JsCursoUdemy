@@ -4,7 +4,7 @@ Este repositório contém todas as atividades e projetos de aprendizagem desenvo
 
 "Seu esforço não faz maior sentido se você não acredita em si mesmo.- Naruto 🍜 "
 
-O curso conta com mais de 73,5 horas de vídeo sob demanda, aborda introdução ao desenvolvimento web, front-end, back-end.
+O curso conta com mais de 145 horas de vídeo sob demanda, aborda introdução ao desenvolvimento web, front-end, back-end.
 
 # Andamento do curso: ✔️(Check) 🕗(Em processo)
 
