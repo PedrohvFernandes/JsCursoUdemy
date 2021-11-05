@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Estou selecionando o indice 2 da lista, no caso estou pegando o segundo irmão da lista */
+/* ul li:nth-child(2){
+    background-color: rebeccapurple;
+}
+
+ul li:nth-child(1){
+    background-color: rebeccapurple;
+}
+
+ul li:nth-child(3){
+    background-color: rebeccapurple;
+} */
+
+/* Eu posso selecionar somente os pares */
+ul li:nth-child(even){
+    background-color: rebeccapurple;
+}
+
+/* E os impares */
+ul li:nth-child(odd){
+    background-color: red;
+}
+
+/* de 3 em 3 ou de 5 em 5 ou de 2 em 2, etc*/
+ul li:nth-child(3n){
+    background-color: plum;
+}
+/* de 4 em 4 + 10 -> começando do 10 elemento ele faz o 4 em 4*/
+ul li:nth-child(4n+10){
+    background-color:brown;
+}

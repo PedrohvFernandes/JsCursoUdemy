@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+input:checked + p{
+    background-color: red;
+}
+
+/* Quando o input não estiver checkado um p apos a checkbox vai ficar com
+background amarelo*/
+input:not(:checked) + p{
+    background-color: yellow;
+}
+/* Todos os paragrafos vão ter azul */
+    /* Menos os paragrafos que tem a classe meio */
+p:not(.meio){
+    color: blue;
+}
+
+
