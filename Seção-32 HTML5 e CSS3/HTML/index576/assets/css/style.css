@@ -1,0 +1,63 @@
+/* Pseudo elemento after 
+então depois do conteudo do elemento eu quero colocar algo*/
+ul li::after{
+    /* Sempre que eu usar um pseudo elemento eu coloco um content 
+        nesse caso coloca um tracinho ne todos os li criando um pseudo elemento*/
+    content: ' - ';
+    /* Posso colocar todo estilo a esse elemento */
+    background-color: red;
+    color: #fff;
+    /* display: block; */
+}   
+
+/* 
+pseudo elemento funciona com um ponto
+ul li:after{
+}
+
+como tambem com dois pontos 
+ul li::after{
+}
+
+Ja as classes com um so ponto
+input:checked + p{
+
+}
+
+*/
+
+/* Before é antes do conteudo do elemento */
+ul li::before{
+    content: ' :D ';
+    background-color: purple;
+    color: #fff;
+    /* display: block; */
+} 
+
+p{
+    font-size: 24px;
+}
+
+/* Quero adicionar algo na/modificar primeira letra do paragrafo */
+p::first-letter{
+    font-size: 150px;
+    display: block;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+/* Primeira linha */
+p::first-line{
+    background-color: red;
+}
+
+/* O que tiver selecionado vai ter o estilo*/
+p::selection{
+    background-color: black;
+    color: white;
+}
+
+/* Pode manipular o placeholder */
+.form-field::placeholder{
+    color: red;
+}
