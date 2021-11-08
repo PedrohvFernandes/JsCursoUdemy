@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Conta de especificidade 
+Aqui a gente vai calcular uma pontuação pra ver qual regra vai ser aplicada*/
+
+/* Hierarquia de seletores:
+
+Maior pontuação(especificidade)
+ID
+
+Classes, atributos e pseudo-classes
+
+
+elementos e pseudo-elementos
+
+
+*/
+
+/* 
+Pontuação pela especificidade selecionada pelo ID
+
+ID     Classes, atributos e pseudo-classes   elementos e pseudo-elementos 
+1      0                                     0
+
+Se eu olhar isso como um numero normal da 100
+*/
+#p{
+    background-color: red;
+}
+
+/* 
+Pontuação pela especificidade selecionada pela classe
+
+ID     Classes, atributos e pseudo-classes   elementos e pseudo-elementos 
+0      1                                     0
+
+Se eu olhar isso como um numero normal da 10
+*/
+    /* Mesmo que a regra da classe esteja abaixo da de ID, a do ID é a aplicada, pois
+    ID tem a maior especificidade */
+.p{
+    background-color: yellow;
+}
+
+
+/* 
+A conta é isso, toda vez que eu tiver a maior especificidade a regra vai ser aplicada, no caso
+por id é a maior
+*/
+
+/* Dessa forma eu consigo aplicar essa regra de baixo aqui, dessa forma eu passo a especificidade de ID 
+eu seleciono o meu p com id e classe
+
+
+ID     Classes, atributos e pseudo-classes   elementos e pseudo-elementos 
+1      1                                     0
+
+*/
+#p.p{
+    background-color: rebeccapurple;
+}
+
+/* Eu poderia continuar colocando outras classes: 
+
+#p.p.outrasclasses{
+    background-color: rebeccapurple;
+}
+Quanto maior for minha especifica seleção, maior minha especificidade
+*/
+
+
+/* Agora por elemento e id */
+
+/* 
+ID     Classes, atributos e pseudo-classes   elementos e pseudo-elementos 
+1      0                                     1
+
+Essa seleção não passa de id com classe, pois a classe tem maior especificidade que o elemento
+*/
+p#p{
+    background-color: aqua;
+}
+
+/* 
+Especificidade total
+
+ID     Classes, atributos e pseudo-classes   elementos e pseudo-elementos 
+1      1                                     1
+*/
+p#p.p{
+    background-color:chartreuse;
+}
+
+/* E quanto mais id, mais classes e mais atributos selecionados é incrementado na especificidade 
+
+ID     Classes, atributos e pseudo-classes   elementos e pseudo-elementos 
+2      1                                     1
+*/
+#b p#p.p{
+    background-color:brown;
+}
+
+/* 
+ID     Classes, atributos e pseudo-classes   elementos e pseudo-elementos 
+2      1                                     2
+*/
+body#b p#p.p{
+    background-color:antiquewhite;
+}
+
+/*
+ID     Classes, atributos e pseudo-classes   elementos e pseudo-elementos 
+2      2                                     2
+*/
+
+body#b.bclass p#p.p{
+    background-color:coral;
+}
+
+/* MAIOR ESPECIFICIDADE NO MOMENTO
+ID     Classes, atributos e pseudo-classes   elementos e pseudo-elementos 
+2      3                                     3
+*/
+body#b.bclass p#p.p::selection:hover{
+
+}
+
+/*
+
+ID     Classes, atributos e pseudo-classes   elementos e pseudo-elementos 
+1      0                                     0                              -> 100
+0      1                                     0                              ->  10
+1      1                                     0                              -> 110
+1      0                                     1                              -> 101
+1      1                                     1                              -> 111
+2      1                                     1                              -> 211  -> 2 id 1 classe e 1 elemento
+2      1                                     2                              -> 212
+2      2                                     2                              -> 222  -> 2 id 2 classe e 2 elemento
+2      3                                     3                              -> 233  -> 2 id 2 classe + 1 pseudo-classe=3   2 elementos + 1 pseudo-elemento=3
+
+*/
+
+/* 2º Forma de sobrescrever a especificidade !important -> essa palavra força o navegador a aplicar isso*/
+
+body#b.bclass p#p.p{
+    background-color:coral !important;
+}
+/* Dessa maneira o important não funciona pois a especificidade acima tem o important e ela é maior que essa especificidade aqui abaixo */
+.p{
+    background-color:blue !important;
+}
+
+/* Dessa forma a gente faz um impate e consegue sobrescrever */
+body#b.bclass p#p.p{
+    background-color:blue !important;
+}
+
+/* Hierarquia de dominio sobre a regra:
+especificidade
+empate
+style
+!important ****
+*/
