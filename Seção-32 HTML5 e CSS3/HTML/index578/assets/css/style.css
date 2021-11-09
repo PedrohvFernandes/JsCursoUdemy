@@ -1,0 +1,25 @@
+/* Uma propriedade herdada é a color */
+    /* Body é o pai de todos os meu elementos 
+    Então se eu tiver um color vermelho aqui, todos os outros elementos meus
+    abaixo dele irão herdar essa caracteristica, o body transmite para os outros elementos o estilo*/
+body {
+    font-family: sans-serif;
+    color: red;
+    font-size: 90px;
+}
+
+/* Todas as propriedades dessa div é passada para os elementos abaixo */
+#texto{
+    font-family: Arial, Helvetica, sans-serif;
+    color:aqua;
+    font-size: 30px;
+}
+
+/* Aqui eu falo pro p não herdar a font size da div com id texto */
+p{
+    font-size: initial;
+    color: initial;
+    
+    /*Aqui é pra falar que eu quero que herde 
+    font-size: inhenit; */
+}
