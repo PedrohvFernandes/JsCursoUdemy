@@ -1,0 +1,170 @@
+/* html, body{
+    height: 100%;
+} */
+
+.texto{
+    /* Existe varios tipos de display por padrão ja vem o display block
+    o display block é um bloco/caixa então tudo que eu passar relacionado a tamanho
+    vão ser aplicadas quando eu mandar*/
+    display: block;
+    background-color: red;
+    /* Estou falando que a div ela tera 50% de largura, mas como a div
+    tem um comportamente de display block ela tem a tendencia de ocupar o espaço todo*/
+    width: 50%;
+}
+/* Qual quer elemento a gente pode falar qual a propriedade desse
+elemento */
+.texto2{
+    /* display inline é mesmo que eu tenho ne spans, paragrafos, etc
+    Com inline quer dizer que é pra ser continuada, com isso ela não aplica
+    nem uma propriedade em relação ao tamanho*/
+    display: inline;
+    background-color: blue;
+    width: 50%;
+    height: 50%;
+}
+
+/* O conteudo esta saindo pra fora por padrão, pois ela não coube na div e é possivel controlar o conteudo quando ele passar pra fora em relação ao tamanho da div */
+.texto3{
+    background-color: brown;
+    width: 200px;
+    height: 200px;
+    /* O que passar pra fora dessa div vai estar escondido*/
+    /* overflow: hidden; */
+
+    /* Eu posso escolher o eixo que eu quero */
+    /* overflow-y: hidden; */
+
+    /* Agora eu possa rolar o conteudo caso ele passe pra fora*/
+    /* overflow-y: scroll; */
+
+    /* O auto ele so coloca a barra caso se passar pra fora, o scroll colocava indpendente se tinha ou não */
+    overflow: auto;
+}
+
+/* As propriedades que controlam o tamanho do conteudo 
+width, height, max-width, max-height e o min, elas podem ter
+varias medidas -> px, em, % etc... e ate auto
+*/
+.texto4{
+    background-color:blueviolet;
+    
+    /* O tamanho que eu quero por meu elemento */
+    width: 200px;
+    height: 200px;
+    
+    /* Essas outras propriedades abaixo é mais pra deixar 
+    responsivo Caso o usuario abra em uma tela menor ou maior etc 
+    */
+    
+    /* Tamanho max dessa div */
+    max-width: 100%;
+    max-height: 100%;
+    
+    /* Tamanho minimo dessa div, nesse caso é 0, ou seja nada*/
+    min-width: 0;
+    min-height: 0;
+
+    overflow: auto;
+}
+
+.texto5{
+    /* Ja vem por padrão o content-box
+    com isso margin, padding e border vão ser somadas ao conteudo
+    então quando coloca uma dessa propriedades voce acrescenta mais conteudo a largura e altura definida, então esse content-box ele cresce pra fora, no fim a gente so esta trabalhando o conteudo*/
+    box-sizing: content-box;
+    background-color:purple;
+    
+    /* A minha div vai ter 100% de largura -> isso ja vem por padrão, que é a largura total que tiver disponivel na tela  */
+    width: 100%;
+    /* As minhas div tem a Altura 100% do viewport, 100% do tamanho da tela*/
+    height: 100%;
+    
+    /* Mesmo que a largura da minha div seja 100%, mas eu quero que o maximo seja 900px, no caso quando o navegador chegar a 600px ele para de crescer*/
+    max-width: 600px;
+
+    /* Usando a propriedae margin para ele se ajustar ao meio 0 pra
+    cima e pra baixo e automatico pra esquerda e direita*/
+    /* margin: 0 auto; */
+
+    /* em cima nada, na lateral auto, em baixo 50px e na outra lateral auto so pra centralizar*/
+    margin: 0 auto 50px auto;
+
+    max-height: 500px;
+    
+    min-width: 0;
+
+    /* Se ela não ocupar a altura minima  que eu quiser ela tera altura minima de 100px, ou seja mesmo que não tem conteudo a altura minima dessa div é 100px*/
+    min-height: 100px;
+    
+    overflow: auto;
+
+    /* Padding do box model que é um enchimento para as divs
+    Com isso eu vou ter 50 px nos cantos do enchimentos da div, o background acamopanha esse enchimento*/
+    padding: 50px;
+
+    border: 5px solid black;
+
+ 
+}
+
+.texto6{
+    /* Temos o padding box, então se a gente quiser que o padding fosse adicionado pra dentro, mas a borda e margin continuassem pra fora eu posso utilizar o padding-box, então o width e height incluem o tamanho do padding*/
+    /* box-sizing: padding-box; */
+
+    /* O mais utilizado é o border-box, toda vez que voce falar
+    largura e altura e todos relacionados com largura e altura
+    voce vai estar falando de borda e de padding, então se eu falar que um div tem 100px é 100 pra largura e altura do conteudo + largura e altura do padding e + largura e altura da borda, com isso a margin aqui não entra porque ela é fora do conteudo*/
+    box-sizing: border-box;
+
+    background-color:purple;
+    
+    width: 100%;
+
+    height: 100%;
+
+    max-width: 600px;
+
+    /* Pra controlar margin:
+    margin-top
+    margin-right
+    margin-bottom
+    margin-left 
+    Resumido: margin: 10px 5px 15px 1px;
+    */
+
+    margin: 0 auto 50px auto;
+
+    max-height: 500px;
+    
+    min-width: 0;
+
+    min-height: 100px;
+    
+    overflow: auto;
+
+    /* Pra controlar padding:
+    Padding-top
+    Padding-right
+    Padding-bottom
+    Padding-left
+    Resumido: padding: 10px 5px 15px 1px; */
+    
+    padding: 50px;
+
+    /* Border 
+    Border-width
+    Border-bottom
+    Border-left
+    Border-right
+    Border-top
+    Border-style
+    Etc ...
+    Largura tipo estilo
+ */
+    border: 5px solid black;
+
+ 
+}
+
+
