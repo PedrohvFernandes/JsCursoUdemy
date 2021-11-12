@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Em vez de colocar o clear no paragrafo, a gente colocou o clear na propria grid 
+foi criado um elemento com a pseudo elemento, que vem dentro da grid, e eu quero que esse elemento
+novo apareça sempre depois do elementos e que ele limpe as duas laterais, consequetemene os elementos posteriores ja vão estar
+com as laterais limpas*/
+.grid::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* Quando a gente fala de grid a gente esta falando de varios quadradinhos na tela 
+alinhadas de maneira que pareça uma tela*/
+
+.grid .col{
+    /* Por padrão nas divs e por elementos de separação  de conteudo vem como display block e
+    quando a gente tem essa propriedade eles ocupam a tela inteira mesmo que não estejam na tela inteira*/
+    /* display: block; */
+
+    /* Temos os inline que não pega tamanho */
+    /* display: inline; */
+
+    /* temos a mesclagem dos dois inline-block, mas essa propriedade é estrnha
+    pois ela pega espaços que são dados no html tipo da enter entre as divs no codigo e
+    isso é super estranho*/
+    /* display: inline-block; */
+
+    width: 300px;
+    height: 300px;
+    background-color: red;
+
+    /* As margens se sobrepoem com os elementos, então as margens não são somadas
+    quando eu tenho margem em dois elementos display block sem flutuação, as margens se sobrepoem*/
+    margin: 20px;
+
+    /* Usando float, float é pra falar que um elemento vai ocupar somente o espaço dele e
+    vai liberar o espaço restante para outro elemento, dessa forma a gente faz o elemento flutuar
+    nesse caso ele esta flutuando para esquerda, com isso a margem é somada, 20px de cada lado, posso
+    falar que ele vai flutuar a direita, somente esses dois lados com o float*/
+    float:left;
+}
+
+/* Quando utiliza a propriedade float dentro dos elementos filhos de um outro elemento, esses elementos não coputam tamanho  
+Com isso o paragrafo entrou dentro do espaço da div pai, para que o paragrafo não ocupe o espaço que sobrou dessa
+grid, a nossa div que esta segurando os filhos não possui nem um tamanho*/
+    /* O p esta ocupando a direita do elemento, a gente usar o clear, falando que pra ele fazer um clear sempre a sua esquerda
+    ele limpa a sua esquerda, como que os elementos estavam a sua esquerda, ele limpa a sua esquerda
+    e começa em uma nova linha*/
+/* p{
+    /* clear:right; */
+    /* clear: left; */
+    /* Limpa os dois lados, mas acontece que nem sempre no elemento a gente consegue utilizar essa propriedade
+    clear: both;
+} */
+
+/* Fazendo a grid de maneira que consiga acomodar 3 grids com espaço delas */
+
+/* Tudo no fim vai ter 30px de tamanho, porque eu somo 15 px da grid de cada lado
+e em cada uma das colunas(col2) eu tenho 15px de padding em cada lado das colunas*/
+
+/* Dessa maneira eu consigo quue todas tenham o mesmo tamanho */
+.grid2{
+    box-sizing: border-box;
+    /* A gente coloca 15px nas bordas da grid */
+    padding: 15px;
+}
+
+.grid2::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* Aqui é somente a estrutura */
+.grid2 .col2{
+    /* Com isso o padding é interno */
+    box-sizing: border-box;
+
+    /* Mesmo que seja 33.33% cada div ainda tem a mais 30px de cada lado, por conta da margem e 
+    do float pois so é somado a margem quando o elemento fica fluatuante por conta do float */
+    width: 33.33%;
+    height: 300px;
+    /* Com isso a gente tira o backgorund e a margin daqui, deixa a coluna
+    so como estrutura para o conteudo(col-content) */
+    /* background-color: brown; */
+    /* margin: 30px;  */
+
+
+    float:left;
+    /* Um padding interno dessa forma a gente consegue a linhar os elementos 
+    A gente tem 15 px aqui, mas no fim a gente vai ter 30 px*/
+    padding: 15px;
+}
+
+/* Agora esse é o conteudo */
+.grid2 .col-content{
+    /* Ele ocupa 100% do espaço disponivel para ele em ralação ao tamanho do pai dele */
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+}
