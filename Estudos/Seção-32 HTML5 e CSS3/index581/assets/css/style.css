@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+
+https://www.w3schools.com/colors/colors_picker.asp 
+https://htmlcolorcodes.com 
+https://coolors.co 
+https://www.w3schools.com/html/html_colors_hsl.asp 
+
+*/
+
+/*  Cores por nome, por hexadecimal, rgba, rgb, HSL e HSLA que é parecido com RGB e RGBA */
+
+/* Por cor */
+div{
+    background-color: aquamarine;
+}
+
+/* No hexadecimal eu tenho duas maneiras de escrever a cor red
+O hexadecimal -> ABCDEF123456789 */
+.teste1{
+    /* color:red; */
+
+    /* Os dois primeiros caracteres são red */
+    /* Os dois segundos caracteres são green */
+    /* Os dois terceiros caracteres são blue */
+    /* FFFFFF -> Cor maxima -> Branco -> ligado
+       000000 -> Sem cor -> Preto -> desligado
+    */
+
+    /* color: #FFFFFF;*/
+
+     /* Quando tenho valores repetidos tipo o branco
+     eu posso colocar somente 3 caractres:
+     color: #FFF;
+     ou o preto color:#000;
+     */
+
+     /* Se o segundo caracter do primeiro é o mesmo que F então não precisa colocar
+      Se o segundo caracter do segundo é o mesmo que F então não precisa colocar
+      Se o segundo caracter do terceiro é o mesmo que F então não precisa colocar*/
+     
+      /* EXEMPLO: */
+      /* color:#fff; */
+     /* color: #FF0000; VERMELHO*/
+     color: #F00;
+}
+
+/* Com RGB-> RED GREEN e BLUE é a mesma coisa so que com numeros */
+.teste2{
+    /* color: rgb(red, green, blue); */
+    
+    /* O maximo é 255, se tudo fica no maximo fica a cor branco, se fica no 0 tudo fica preto */
+    /* color: rgb(255, 255, 255); */
+    color: rgb(123, 80, 28);
+}
+
+/* RGBA, o A é de alpha, que é a opacidade 
+1-> sem opacidade
+0-> com opacidade*/
+.teste3{
+    /* color: rgba(red, green, blue, alpha); */
+
+    /* Geralmente coloca uma cor, um preto clarinho
+     0 0 0 0 e o ultimo 0 ate 1 -> 0.1, 0.2, 0.25, etc, o 0.25 são 25% de opacidade*/
+     /* color: rgba(0, 0, 0, 1); */
+     color: rgba(0, 0, 0, 0.55);
+}
+
+
+#teste-div{
+    background-color:rgba(0, 0, 0, 0.60);
+}
+.teste4{
+    color: #fff;
+}
+
+/* HSL(hue, saturation, lightness) 
+O HSLA é o alpha a opacidade*/
+.teste5{
+    /* color: hsl(hue, saturation, lightness); */
+    /* color: hsl(147, 50%, 47%); */
+
+    /* color: hsla(hue, saturation, lightness, alpha) */
+    color: hsla(147, 50%, 47%, 100%);
+}
