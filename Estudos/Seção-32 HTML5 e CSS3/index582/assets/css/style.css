@@ -1,0 +1,79 @@
+/* https://www.w3schools.com/cssref/css_units.asp */
+
+/* Medias absolutas:
+As medidas absolutas elas não sem baseia em nada, independente do tamanho do pai, por exemplo se o pai tiver uma largura de 50%, e a filha tiver 
+500px ela não se vai basear na quele tamanho do pai e sim na dela, ela é independente ate mesmo das configurações da fonte do navegador 
+*/
+p{
+    /* Por padrão ele usa uma unidade de medida relativa, com px ela vira absoluta */
+    font-size: 20px;
+}
+
+/* Para a unidade rem */
+html{
+    /* A gente coloca tamanho no html ou body, pra que os outros elementos
+    com unidade rem possa se basear nesse tamanho aqui, com isso geralmente a gente coloca 100%, 100% é para
+    indicar que é pra usar o tamanho disponivel do navegador que é 16px*/
+    /* font-size: 20px; */
+    /* font-size: 100%; */
+
+    /* Mas eu quero trabalhar de forma relativa que o rem na font do elemento filho pareça com px eu coloco a % pra 62.5%
+    com isso eu pego 62.5% de 16px -> 16*0.625 -> 10px, com isso o meu rem no elemento filho se comporta como 10px, se eu quero
+    que ele tenha 16px eu pego 1.6rem no filho -> 1.6rem x 10px = 16px com isso eu posso utilizar o rem para tudo
+    */
+    font-size: 62.5%;
+}   
+
+/* Unidades relativas 
+Essas unidades já se baseiam em outra coisa, não são independentes
+
+*/
+
+
+/* Em -> ele faz com que o elemento se comporte em outro elemento pai mais próximo dele  
+é feito uma multiplacação -> 50px(pai) x 0.5em(filha) = 25px(filha)
+*/
+.pai-em{
+    font-size: 50px;
+}
+
+.pai-em p{
+    /* O paragrafo dentro dessa div vai se adaptar aos 50px da div, por conta da unidade de medida em
+    font-size: 1em; */
+
+    /* Dessa maneira eu falo que ele vai ter metade dos 50px -> 25px*/
+    /* font-size: 0.5em; */
+
+    /* Posso falar que eu quero maior baseado no tamanho do pai */
+    font-size: 1.5em;
+}
+
+/* Rem o mais utilizado*/
+.pai-rem{
+    font-size: 50px;
+}
+
+.pai-rem p{
+/* O rem ele é baseado no elemento root do documento, que é o HTML ou body, no html tem  20px 
+então a fonte do paragrafo com a media rem vai ter 20px nesse caso e rem é a mesma coisa
+que o em ele é baseado em algo, nesse caso com o elemento raiz e a multiplicação é a mesma
+20px(root) x 1rem(filha) = 20 px(filha)*/
+    /* font-size: 1rem; */
+
+    /* o HTML eta com 62.5% que é 10px de 16px(100%) padrão do navegador 
+    com isso 1.6rem(filha) x 10px(HTMLouBODY/62.5%) = 16px(filha)
+    */
+    font-size: 1.6rem;
+}
+
+.pai-teste{ 
+    /* Dessa maneira eu chego a 300px  -> 30rem x 10px -> 300px
+    dessa maneira fica tudo adaptativo ao que o usuario quer, por exemplo deixar a font mais pequena ou maior*/
+    width: 30rem;
+    height: 30rem;
+    background-color: yellow;
+}
+
+.pai-teste p{
+    font-size: 1.6rem;
+}

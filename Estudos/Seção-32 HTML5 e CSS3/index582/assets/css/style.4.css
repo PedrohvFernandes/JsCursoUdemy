@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 
+Vmin -> vmin e vmax é a mesma coisa do vh e vw mas é relativo a menor parte do viewport(tela) seja ela altura ou largura
+Vmax -> a maior parte da tela seja ela altura ou largura, acaba comparando os dois, se a largura estiver maior o vmax se encaixa nela e se a 
+altura tiver menor o vmin se encaixa para ela ou o inverso
+
+Lembrando que isso é de acordo com o tamanho da  tela(viewport) do navegador, então o tamanho do elemento ele vai se baseando
+com o tamanho da tela do navegador
+*/
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.pai-porcentagem{
+    width: 50rem;
+    height: 100vh;
+}
+
+.pai-porcentagem > div{
+    width: 50%;
+
+    height: 50rem;
+    background-color: blue;
+}
+
+.pai-porcentagem p{
+    /* A fonte do paragrafo é relacionada ao vmax*/
+    font-size: 2vmax;
+}

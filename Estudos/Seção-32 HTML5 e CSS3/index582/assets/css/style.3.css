@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/* a porcentagem é feita baseada no elemento pai, se o pai tiver 50% de largura o limite do filho é 50% com os seus 100%, no caso 100% do filho é 
+50% do pai ou se o pai tem 500px de largura e o filho 50% ele tem metade desses 500px de largura do pai que é 250px de largura*/
+.pai-porcentagem{
+    width: 50rem; /*500px -> 50rem * 10px(html 62.5% de 16px(100%) = 10px) = 500px*/
+    height: 100vh;
+}
+
+.pai-porcentagem > div{
+    /* Metada da largura do pai que é 500px */
+    width: 50%;
+
+    /* 500px de altura */
+    height: 50rem;
+    background-color: blue;
+}
+
+.pai-porcentagem p{
+    font-size: 1.6rem;
+}
+
+.color-one{
+    background-color: brown;
+}
+
+.color-two{
+    background-color: aqua;
+}

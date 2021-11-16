@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    /* Suavização do scroll */
+    scroll-behavior: smooth;
+}
+
+/* 
+VW -> para o width
+VH -> para o height
+*/
+.pai-vw-vh{
+    /* Com isso ela tem 100% da largura do viewport que é a area que a gente ve
+    no navegador independente do tamanho da tela do navegador, no caso seria a area visivel do navegaor é o viewport*/
+    width: 100vw;
+
+    /* 100% da altura do viewport */
+    height: 100vh;
+}
+
+.pai-vw-vh p{
+    font-size: 1.6rem;
+}
+
+.color-one{
+    background-color: brown;
+}
+
+.color-two{
+    background-color: aqua;
+}
