@@ -1,0 +1,59 @@
+/* https://www.w3schools.com/css/css_text.asp */
+
+p{
+    /* Propriedades pra trabalhar com cor no texto */
+    color: red;
+    background-color: aquamarine;
+    
+    /* Tamanho da fonte */
+    font-size: 20px;
+
+    /* estilo da fonte */
+    font-style: italic;
+
+    /* negrito 100 a 900/bold e nem toda fonte suporta o negrito*/
+    font-weight: bold;
+
+    /* direção rtl da direita pra esquerda
+    ltr -> da esquerd pra direira(left to right)
+    */
+    direction: ltr;
+
+    /* espaçamento entre as letras*/
+    letter-spacing: 1px;
+
+    /* Espaçamento entre as palavras */
+    word-spacing: 5px;
+
+    /* alutra da linha */
+    line-height: 25px;
+
+    /* alinhar o texto do lado que quiser 
+    isso é diferente da direction, a direção é da oonde
+    o texto vai pra onde, ja o text align é pra alinhamento
+    do texto em si pro centro, pra direita, pra esquerda
+    */
+    text-align: center;
+
+    /* decoração no texto linha em cima, texto riscado, linha abaixo
+    pode usar todos ao mesmo tempo, geralmente o riscado são para promoçoes de preços
+    os preços antigos são riscados*/
+    /* text-decoration: overline;
+    text-decoration: underline;
+    text-decoration: line-through; */
+    text-decoration: overline underline line-through;
+    /* identação de texto nos paragrafos*/
+    /* text-indent: 50px; */
+
+    /* Sombra no texto, um sombra que anda da esquerda pra direita de 2px e em 2px do topo pra baixo da cor red*/
+    /* text-shadow: 2px 2px red; */
+    /* Com blur agora */
+    /* text-shadow: 2px 2px 5px red; */
+    /* Somente da direita pra esquerda ou o inverso no caso o 1 positivo 
+    e 1 px do topo pra baixo, dessa forama fica decido a sombra*/
+    text-shadow: -1px 1px 0 black;
+
+    /*  Propriedade que fala se o meu texto é caixa alta, caixa baixa, uma letra maiuscula em cada palavra(capitalize)*/
+    text-transform: uppercase;
+
+}
