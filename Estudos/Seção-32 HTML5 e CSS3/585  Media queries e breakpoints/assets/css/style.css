@@ -1,0 +1,89 @@
+/*
+
+https://devfacts.com/media-queries-breakpoints-2021/ --> os breakpoints ideais para 2021 -> Breakpoints são os tamanhos das telas dos dispositivos, 
+o tamanho da tela do dispositivo pra modificar o site de acordo com esse tamanho
+
+Sobre media e breakpoints:
+https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
+
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries
+
+*/
+
+/* Esse modelo de padrão é desktop firts e depois focar no mobile
+e tem o padrão mobile firts, que faz o app pra mobile primeiro e depois pra desktop.
+Esses dois padrões sobrescrevem todas as regras do first com o media querie*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.grid2{
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.grid2::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid2 .col2{
+    box-sizing: border-box;
+    width: 33.33%;
+    height: 300px;
+    float:left;
+    padding: 15px;
+}
+
+.grid2 .col-content{
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+}
+
+/* Boa pratica: Sempre fazer o media querie no final, porque sempre é aplicado tudo que esta
+depois no css -> Cascading Style Sheets e sempre colocar o tamanho do media em ordem crescente */
+
+/* Media queries -> se a tela for menor que tanto px ela faz tal coisa, nesse caso pegar as 3 colunas e transforma em 2 por exemplo 
+e se diminuir mais ainda fica so uma coluna*/
+    /* Breakpoints -> pontos de quebra -> um dispositivo que tenha o tamanho de largura de 320px aplica uma tal regra*/
+
+/* Breakpoints -> por exemplo: iphone 5/SE -> 320px */
+
+/*Esse media tem a seguinte regra: Se a largura maxima do dispositivo for 569px ele faz tal coisa
+*/
+    /* No caso do all poderia ser -> tv, screen, print -> isso é pra falar que em quais dispostivos essa regra deve entrar */
+@media all and (max-width:569px){
+    .grid2 .col2{
+        width: 100%;
+    }
+}
+/* O not é pra falar que essa regra não entra pra screen -> dispositivos moveis por exemplo */
+/* @media not screen and (max-width:320px){
+    .grid2 .col2{
+        width: 100%;
+    }
+} */
+
+/* A largura minima da tela tem que ser 569px pra essa regra ser aplicada 
+então quando passar/ou ter 569px essa regra é aplicada, no caso 569 ou pra cima e(and) ate 768px passou disso
+ela pega o css padrão pra desktop*/
+@media all and (min-width:569px) and (max-width:768px){
+    .grid2 .col2{
+        width: 50%;
+    }
+}
+
+@media all and (min-width:769px) and (max-width:1200px){
+    .grid2 .col2{
+        width: 33.33%;
+    }
+}
+
+@media all and (min-width:1200px){
+    .grid2 .col2{
+        width: 25%;
+    }
+}

@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+.grid2{
+    max-width: 1200px;
+    padding: 15px;
+    margin: 0 auto;
+    padding-top: 73px;
+}
+
+.grid2::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid2 .col2{
+    box-sizing: border-box;
+    width: 33.33%;
+    height: 300px;
+    float:left;
+    padding: 15px;
+}
+
+.grid2 .col-content{
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+}
+
+.menu{
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.849);
+}
+
+.menu ul{
+    list-style: none;
+    display: block;
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.menu ul li{
+    float:left;
+}
+
+.menu ul li a{
+    display: block;
+    color: #fff;
+    padding: 20px;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover{
+    background-color: #333;
+}
+
+.full-page{
+    max-width: 100%;
+    padding-top: 73px;
+    height: 100vh;
+    background-color: turquoise;
+}
+
+.full-page-content{
+    background-color: rgba(146, 143, 143, 0.5);
+    max-width: 1200px;
+    padding: 15px 30px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+@media all and (max-width:569px){
+    .grid2 .col2{
+        width: 100%;
+    }
+}
+@media all and (min-width:569px) and (max-width:768px){
+    .grid2 .col2{
+        width: 50%;
+    }
+}
+
+@media all and (min-width:769px) and (max-width:1200px){
+    .grid2 .col2{
+        width: 33.33%;
+    }
+}
+
+@media all and (min-width:1200px){
+    .grid2 .col2{
+        width: 25%;
+    }
+}
