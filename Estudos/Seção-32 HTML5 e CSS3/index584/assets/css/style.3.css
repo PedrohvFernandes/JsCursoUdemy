@@ -1,0 +1,29 @@
+.filha1-2, .filha2-2{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 0, 0, 0.452);
+    margin: 10px;
+    position: static;
+}
+
+.filha2-2{
+    /* Os dois elementos agora estão em camadas, com isso a filha2 passa a filha 1*/
+    position: absolute;
+    background: yellow;
+    /* o z-index passa essa div pra camada 1*/
+        /* O -1 ele fica por tras de tudo */
+    z-index: -1;
+}
+
+.filha1-2{
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    position: absolute;
+    margin-left: -150px;
+    /* o z-index passa essa div pra camada 2 que fica depois da 1, com isso ela fica na frente 
+    da filha 2 */
+        /* O z inde faz isso, as vezes voce cria um elemento e não coloca essa propriedade, outro elemento que esta na pagina
+        fica por cima desse elemento que voce não queria, obs: o que tiver o maior numero ele fica por cima*/
+    z-index: 2;
+}

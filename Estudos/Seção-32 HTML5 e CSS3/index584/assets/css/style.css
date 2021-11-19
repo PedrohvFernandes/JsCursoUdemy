@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+}
+
+.pai{
+}
+
+.filha1, .filha2{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 0, 0, 0.452);
+    margin: 10px;
+    /* Posição padrão dos elementos: */
+    position: static;
+}
+
+.filha2{
+    background: yellow;
+    float: left;
+}
+
+.filha1{
+    /* Em relação ao topo da pagina 50px + 10px(margin) = 60px. Obs: não vai mudar enquanto a div tiver posição static */
+    top: 50px;
+    /* Em relação a esquerda da pagina ela anda 50px + 10px(margin) = 60px*/
+    left: 50px;
+
+    /* Pode ter valores nagativos */
+    /* right: -50px;
+    bottom: 50px; */
+
+    /* Mudando pra possção relativa, ela ja muda, relativa é uma posição relativa aos elementos que estão ao redor*/
+    /* position: relative; */
+
+    /* Quando eu estava com a posição relativa, o meu elemento se comportou como se, o local que ele estava ocupando ainda estivesse ali
+    o position relative não mudou o flow da pagina, ele sai do lugar como foi mandando top e left, mas ainda ele vai ser comportar como se ele estivesse no
+    lugar dele*/
+        /* A posição absoluta é como se eu mudasse meu elemento de camada, porque agora é como se esse elemento não existise aqui nesse local
+        tanto que a div filha 2 subiu, ocupando o espaço que era da div filha 1, então a posição absoluta é uma posição absoluta em relação 
+        a determinada coisas, nesse momento é em realção ao navegador, esse elemento fica por cima  dos outros elementos e é como se ele não existisse
+        na pagina e os outros elementos não vão sair do lugar por conta desse elemento*/
+    position: absolute;
+
+}

@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+}
+
+.pai{
+    /* Altura da pagina, que é 3vezes o viewport */
+    height: 300vh;
+}
+
+.filha1, .filha2{
+    /* Se a largura e altura é 300px  quer dizer que ela ta 150px pra esquerda e pra direira e pra de cima pra baixo */
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 0, 0, 0.452);
+    margin: 10px;
+    /* Posição padrão dos elementos: */
+    position: static;
+}
+
+.filha2{
+    background: yellow;
+    float: left;
+}
+
+.filha1{
+    /* Alinhar ela ao meio com gambiarra*/
+    top: 50%;
+    /* A gente tira 150px do top */
+    margin-top: -150px;
+    left: 50%;
+    position: absolute;
+    /* e aqui a gente tira 150px da esquerda */
+    margin-left: -150px;
+}
+

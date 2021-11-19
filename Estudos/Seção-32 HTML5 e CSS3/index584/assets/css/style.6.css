@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+}
+
+/* Pra usar a posição sticky eu tenho que ter um comportamento de rolagem */
+/* Eu quero que o meu A fique preso no topo da minha ul e esse A desça comigo ate chegar no B e do B ate C*/
+ul{
+    height: 100px;
+    overflow-y: auto;
+
+}
+
+/* Ele rola ate ele encontrar outro sticky */
+ul li.sticky{   
+    position: sticky;
+    background-color: gray;
+    /* Ele vai ficar posicionado na posição do topo 0 */
+    top:0;
+}

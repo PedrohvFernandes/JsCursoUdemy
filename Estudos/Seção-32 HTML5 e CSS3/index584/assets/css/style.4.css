@@ -1,0 +1,40 @@
+.filha1-2, .filha2-2, .filha3-2{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(255, 0, 0);
+    margin: 10px;
+    position: static;
+}
+
+.filha2-2{
+    /* Ele não muda o flow da pagina, mas ele usa a relação do elemento que estiver proximo dele para se basear no posicionamento*/
+    /* position: relative; */
+    background: yellow;
+}
+
+.filha1-2{
+}
+
+/* Filha 3 */
+.filha3-2{
+    background-color: blue;
+    /* Agora o top não se move em relação a tela(viewport), ao topo da pagina, e sim do elemento prximo a ele  */
+    position: relative;
+    top:100px;
+    left: 100px;
+}
+
+/* Elemento dentro da filha 3 que tem a posição relativa*/
+.outra{
+    /* Como o seu pai que é a filha 3 tem a posição relativa, ela respeita essa posição
+    então top, left, etc não vai fazer nada, ele não consegue sair pra fora do elemento, então
+    se eu mexer nas propriedades de altura e largura seria respeitando o pai dele */
+    position: absolute;
+    font-size: 50px;
+    background-color: #fff;
+    /* top:0; */
+    /* São 50 px do topo do pai relativo delem ele respeita a posição relativa do pai
+    a gente usa isso pra alinhar o elemento */
+    top:50px;
+    left: 50px;
+}
