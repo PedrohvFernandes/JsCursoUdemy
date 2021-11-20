@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#um_aparte_no_modelo_flex
+*/
+
+/* Flexbox é uma caixa flexivel */
+
+/* Um container de flex box ele tambem utiliza a propriedade de display, so que é display flex, o container comporta
+de maneira de display block, mas são os filhos que são efetados pelo display flex */
+.flex-container{
+    display: flex;
+    /* Apos ativar o flex eu ganho estas configurações por padrão: */
+    /* flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch; */
+
+    
+    /* O flex-direction(direção) me indica do eixo principal do meu flex, então eixo significa que todos os elementos vão ser alinhados
+    no eixo principal mandado: row, row-reverse -> eixo horizontal | column e column-reverse --> eixo vertical*/
+    flex-direction: row; /*Tanto o row como o column pode ser eixo principal e perpendicular, quem estivr no flex-direction é o eixo principal, por padrão ja vem o row na horizontal  e o eixo perpendicular sempre é perpendicular ao eixo principal*/
+    
+    /* Alinhar os itens no eixo principal/main axis: */
+
+    /* Se alinho no inicio do eixo princiapl */
+    /* justify-content: flex-start; */
+
+    /* Se alinho no final do eixo princiapl */
+    /* justify-content: flex-end; */
+
+    /* Se alinho no centro do eixo princiapl */
+    justify-content: center;
+
+    /* Se alinho de aocordo com o espaço em volta do elemento do eixo princiapl 
+    então ele distribui o espaço usando que sobra, de forma proporcinal, a onde todos tenham um espaçamento ideal e iguais*/
+    /* justify-content: space-around; */
+
+    /*  O espaço disponivel distribuido entre cada um dos elementos, sem a lateral*/
+    /* justify-content: space-between; */
+
+    /* distribui um espaço igualmente pra todos */
+    /* justify-content: space-evenly; */
+
+    /* Alinhar os itens no Eixo perpendicular/cross axis: */
+
+    /* No inicio do eixo perpendicular */
+    /* align-items: flex-start; */
+
+    /* no meio */
+    align-items: center;
+ 
+    /* No fim */
+    /* align-items: flex-end; */
+
+    /*Baseline significa baselina da fonte, de acordo com o tamanho da fonte
+     todos são alinhados com a linha base da fonte*/
+    /* align-items: baseline; */
+
+    /* O que vem por padrão, stretch é esticar os elementos, ate a altura do conteudo principal caso for row e caso se for column ate a largura maxima*/
+    /* align-items: stretch; */
+
+    background-color: yellow;
+    height: 500px;
+    /* Em vez do margin em cada um dos filhos, temos o gap que faz o espaçamento de cada um */
+    /* gap:30px; */
+}
+
+.flex-item{
+    color: #fff;
+    /* width: 100%; */
+    background-color: brown;
+    margin: 10px;
+}
+
+.flex-item:nth-child(3){
+    font-size: 150px;
+}
