@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+.flex-container{
+    display: flex; 
+    justify-content: flex-start;
+    /* Se não tiver espaço pra ocupar  essa linha inteira, voce quebra essa linha e poem o elemento na outra linha*/
+    flex-wrap: wrap;
+    /* Pega os intens e alinha */
+    align-items: flex-start;
+    /* align content pega o conteudo todo e alinha no centro, no inicio, etc*/
+    /* align-content: center; */
+    
+    /* Um espaço em volta do conteudo*/
+    /* align-content: space-around; */
+
+    /* Um espaço entre os elementos  */
+    align-content: space-between;
+
+    background-color: yellow;
+    height: 640px;
+    
+}
+
+.flex-item{
+    width: 33.33%;
+    /* width: 320px; */
+    color: #fff;
+    background-color: brown;
+}
