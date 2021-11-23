@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container2, .flex-container3, .flex-container4, .flex-container5{
+    margin-top: 10em;
+}
+ /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+
+.flex-container{
+    /*o display flex é o elemento pai, ele se comporta em realção ao outros elementos como block*/
+    /* display: flex;  */
+    
+    /* Eu tenho o inline-flex que é a mesma coisa que o inline block, não muda o flow
+    dos outros conteudos*/
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    background-color: yellow;
+    height: 500px;
+    width: 200px;
+}
+
+.flex-item{
+    margin: 10px;
+    color: #fff;
+    background-color: brown;
+}
+
+/* Uma grid */
+.flex-container2{
+    display: flex;
+    justify-content: space-between;
+    /* Fazendo os elementos quebrarem */
+    /* flex-wrap: wrap; */
+    /* Atalho: */
+    flex-flow: row wrap;
+    /* flex-flow: column wrap; */
+    background-color: yellow;
+}
+
+.flex-item2{
+    /* width: 100%; do espaaço que sobrou pra o filho, quando utiliza elemento flex, isso
+    quer dizer que os filhos desse elemento(flex container) se comportem da maneira
+    que foi pedido no pai(flex container), então quando falo 100%  é do espaço
+    que sobrou e não do elemento, e no flex tudo é assim*/
+    /* width: 100%; */
+    width: 32%; 
+    /* margin: 10px; */
+    margin-bottom: 2%;
+    height: 200px;
+    color: #fff;
+    background-color: brown;
+}
+
+
+/* Como que cada um dos meus itens vão se comportar */
+.flex-container3{
+    display: flex;
+    justify-content: space-between;
+
+    /* Fazendo os elementos quebrarem:*/
+
+    /* flex-wrap: wrap; */
+
+    /* Atalho: flex-direction e flex-warap*/
+    flex-flow: row wrap;
+    /* flex-flow: column wrap; */
+    background-color: yellow;
+}
+
+.flex-item3{
+/*  Fazendo com que os elementos se acomodem de acordo com o espaço do containeir 
+    o flex-grow: pega o espaço que tem sombrando(vazio) na tela e cresce meu elemento pra
+    o tamanho especifico da tela, esse espaço é dividido pra cada um dos conteudos e
+    esse espaço dividido é jogado pros conteudos
+*/
+    /* flex-grow: 1; */
+
+
+    /* Ele permite que o meu elemento diminua, se colocar o 0 ele não permite 
+    que o elemento se diminua
+    */
+    
+    /* flex-shrink: 1; */
+
+
+    /* Reservar um espaço pros elementos antes de distribuir o espaço em branco para os elementos  */
+    /* O flex basis é pra falar que eu quero o espaço primeiro seja distribuido
+    320px pra cada um dos elementos, depois de ter distribuido esse espaço pra cada um
+    dos elementos de 320px, ae sim voce pode se ajustar da maneira que quiser
+    */
+    
+    /* flex-basis: 320px; */ /*+ o espaço que tiver vazio, antes da os 320px pros elementos, então depois se sobra 20px, ela pega os 20px dividi pra todos os elementos e da esse esapço dividido pra os elementos*/
+    
+
+    /* Atalho: grow, shrink e basis*/
+    flex: 1 1 320px;
+    /* margin: 10px; */
+    height: 200px;
+    color: #fff;
+    background-color: brown;
+}
+
+.flex-item3:nth-child(2){
+    /* O flex grow ele é uma proporção do espaço em branco que sobrou e vai ser dividio
+    pra todos os elementos, pra elementos especificos ou eu posso mudar pra um so elemento*/
+        /* Estou falando que a minhda div 2 ela tem uma proporção de 2, o espaço em branco
+        é dividido igualmente pra todos os elementos, mas o 2 ele recebe 2 vezes mais espaço em branco que sobrou */
+            /* Mesma coisa com o flex shrink */
+    flex: 2 4 320px;
+    height: 200px;
+    color: #fff;
+    background-color: purple;
+}
+
+/* Como que o elemento vai ser posicionar */
+.flex-container4{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+    background-color: yellow;
+    height: 800px;
+}
+
+.flex-item4{
+    width: 100%;
+    color: #fff;
+    background-color: brown;
+}
+
+.flex-item4:nth-child(3){
+    /* O align self é pra alinha diferente dos outros elementos, ele muda
+    a regra que foi definada pra ele pelo pai */
+    align-self: flex-end;
+}
+
+.flex-item4:nth-child(4){
+    align-self: center;
+}
+
+.flex-item4:nth-child(2){
+    align-self: stretch;
+}
+
+
+/* order: realinhar a ordem dos elementos */
+.flex-container5{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+    background-color: yellow;
+    height: 800px;
+}
+
+.flex-item5{
+    width: 100%;
+    color: #fff;
+    background-color: brown;
+}
+
+/* .flex-item5:nth-child(1){
+    order:1;
+} */
+
+.flex-item5:nth-child(1){
+    order:-1;
+}
+
+
+.flex-item5:nth-child(2){
+    order:-2;
+}
+
+.flex-item5:nth-child(3){
+    order:-3;
+}
+
+.flex-item5:nth-child(4){
+    order:-4;
+}
+
+.flex-item5:nth-child(5){
+    order:-5;
+}
