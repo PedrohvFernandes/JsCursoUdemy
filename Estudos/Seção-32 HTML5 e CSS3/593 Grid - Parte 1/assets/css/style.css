@@ -1,0 +1,278 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font: sans-serif;
+    font-size: 40px;
+}
+
+.grid, .grid2, .grid3{
+    margin-top: 40px;
+}
+
+/* Grid são grades, parecido com tabelas -> com linhas e colunas
+na grid a gente configura as linhas e colunas da grade, mas se quiser
+algo mais automatico a gente configura as colunas e vai deixar automaticamente deixar o
+conteudo preencher as linhas */
+
+
+/* Uma grid com duas colunas colunas de 50% cada uma*/
+.grid{
+    display: grid;
+    /* Tamanho das colunas na ordem */
+    grid-template-columns: 50% 50%;
+    /* Espaçamento entre a grid */
+    gap: 30px;
+}
+
+.grid div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+.grid2{
+    display: grid;
+    /* dependendo de como a minha grid tiver com essas unidades eu tenho um overflow, porque o gap é somado aqui, mas é possivel deixar isso automatico*/
+    /* Eu não preciso utilizar somente % e não preciso usar uma medida especifica, a 1 coluna sempre tera 200px e a segunda 50% do tamanho do elemento pai*/
+    grid-template-columns: 200px 50%;
+    gap: 30px;
+}
+
+.grid2 div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+
+.grid3{
+    display: grid;
+
+    /* O fr faz com que a segunda coluna so ocupe o restante do espaço em branco da tela 
+    1 fragmento, esse fragmento é proporcional ao espaço, então se quisesse ter uma outra coluna eu poderia ter
+    e se quiser que uma coluna ocupe mais espaço em branco que a outro pode fazer isso tambem
+    */
+    grid-template-columns: 200px 1fr 3fr;
+    gap: 30px;
+}
+
+.grid3 div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+/* uma grid de exatamente 200px que é uma medida absoluta usando fr  
+nossa grid so expande ate o meio*/
+.grid4{
+    /* Tamanho maximo */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* 3 colunas de 1 fr */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.grid4 div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+
+
+.grid5{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+
+    /* pra cada coluna eu adiciono dimensões, e pra que isso não fique custoso pra adicionar colunas, pra não ter que adicionar 30
+    medidas pra ter 30 clunas eu uso o repeat(10, 1fr) -> repita 10 1fr -> 10 colunas com 1 fragmento*/
+    /* grid-template-columns: repeat(10, 1fr); */
+
+    /*  São 6 colunas ao todo, e sempre na segunda coluna eu tenho o tamanho de 2 fragmento  */
+    grid-template-columns: repeat(3, 1fr 2fr);
+
+    /*  São 9 colunas ao todo, e sempre na segunda e terceira coluna eu tenho o tamanho de 2 fragmento  */
+    /* grid-template-columns: repeat(3, 1fr 2fr 2fr);  */
+
+    gap: 30px;
+}
+
+.grid5 div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+
+/* Layout responsivo pra celulares usando grid ou poderia usar media query */
+
+.grid6{
+    /* Tirando o limite maximo da largura pra ter as 5 colunas */
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    display: grid;
+
+    /* os 320px do iphone, a função minmax recebe um tamanho min pras colunas que é os 320px 
+    e o maximo que é ocupar fragmento inteiro os espaços em brancos, se eu repetir isso 3 vezes
+    eu tenho um problema, a grid acaba não quebrando*/
+    /* grid-template-columns: repeat(3, minmax(320px, 1fr)); */
+
+    /* Em vez de falar 3 colunas eu deixo a grid automatica, auto-fill, ele tenta agora encaixar as colunas ou no min que seria os 320px ou no maixmo que é 1fr inteiro*/
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.grid6 div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+/* Mexendo nas linhas */
+.grid7{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 1º linha com 2 fragmentos, 3º linha com 3 fragmentos e a 2 e o restante das linhas com 1 fragmento */
+    /* grid-template-rows: 2fr 1fr 3fr; */
+    
+    /* sempre a segunda linha ela vai ter 2 fr */
+    grid-template-rows: repeat(2, 1fr 2fr);
+    gap: 30px;
+}
+
+.grid7 div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+/*  */
+.grid8{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.grid8 div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+/* Pegando a div 5 na coluna 2 e fazendo iniciar ne algum lugar e terminar ne algum outro lugar
+nesse caso inicia na 2 e termina na 4, elas não ocupam o mesmo espaço*/
+    
+.grid8 div:nth-child(5), .grid8 div:nth-child(6){
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: brown;
+}
+
+/* E da pra falar as linhas, nesse caso estamos fazendo duas ocuparem o mesmo espaço */
+.grid9{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.grid9 div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+
+/* E da pra falar as linhas */
+.grid9 div:nth-child(5), .grid9 div:nth-child(6){
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: brown;
+    grid-row-start: 3;
+}
+
+/* Usando z-index pra fazer o 5 ter a camada mais alta */
+.grid9 div:nth-child(5){
+    background-color: yellow;
+    z-index: 1;
+}
+
+/* .grid9 div:nth-child(6){
+    z-index: 2;
+} */
+
+
+.grid10{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.grid10 div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+
+.grid10 div:nth-child(5){
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: brown;
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+
+
+/* Mexendo so no span da colun, dessa forma o flow da grid não muda tanto */
+
+.grid11{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.grid11 div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+/* Se a minha div 5 faz um span de 2 linha, ela ocupa duas linhas*/
+/* Se a minha div 5 faz um span de 2 colunas, ela ocupa duas colunas*/
+.grid11 div:nth-child(5){
+    background-color: brown;
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+
+.grid12{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.grid12 div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+.grid12 div:nth-child(5){
+    background-color: brown;
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+@media (max-width: 768px){
+    .grid12 div:nth-child(5){
+        grid-column: span 1;
+    }
+}
