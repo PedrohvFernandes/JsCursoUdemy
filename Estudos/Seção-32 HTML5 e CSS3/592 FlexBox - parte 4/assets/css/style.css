@@ -1,0 +1,39 @@
+/* O flex é mais flexivel, caso queira alinhar elementos um dentro do outro o flex é a melhor opção para se usar, em vez do grid */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 24px;
+}
+
+p{
+    margin: 0 0 24px;
+}
+
+.two-columns{
+    display: flex;
+
+}
+
+.two-columns .columns{
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    margin: 15px;
+    padding: 30px;
+}
+
+.gallery{
+    flex-flow: row wrap;
+    display: flex;
+}
+
+.gallery .img{
+    flex: 1 0 20%;
+    height: 50px;
+    background-color: blue;
+    margin: 10px;
+}

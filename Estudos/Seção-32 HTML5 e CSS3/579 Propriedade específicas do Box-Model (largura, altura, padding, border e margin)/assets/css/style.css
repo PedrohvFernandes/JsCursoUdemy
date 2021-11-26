@@ -1,7 +1,3 @@
-/* html, body{
-    height: 100%;
-} */
-
 .texto{
     /* Existe varios tipos de display por padrão ja vem o display block
     o display block é um bloco/caixa então tudo que eu passar relacionado a tamanho
@@ -68,6 +64,7 @@ varias medidas -> px, em, % etc... e ate auto
     overflow: auto;
 }
 
+/* https://developer.mozilla.org/pt-BR/docs/Web/CSS/box-sizing */
 .texto5{
     /* Ja vem por padrão o content-box
     com isso margin, padding e border vão ser somadas ao conteudo
@@ -100,7 +97,7 @@ varias medidas -> px, em, % etc... e ate auto
     overflow: auto;
 
     /* Padding do box model que é um enchimento para as divs
-    Com isso eu vou ter 50 px nos cantos do enchimentos da div, o background acamopanha esse enchimento*/
+    Com isso eu vou ter 50 px nos cantos do enchimentos da div, o background acompanha esse enchimento*/
     padding: 50px;
 
     border: 5px solid black;
