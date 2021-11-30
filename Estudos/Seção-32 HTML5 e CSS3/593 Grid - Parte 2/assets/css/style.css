@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font: sans-serif;
+    font-size: 40px;
+}
+
+.grid12, .grid13{
+    margin-top: 40px;
+}
+
+.grid12{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Nomeando as colunas, as variaveis das colunas */
+    grid-template-columns: [um]1fr 
+    [dois]1fr 
+    [tres]1fr 
+    [quatro];
+    grid-template-rows: [um]1fr 
+    [dois]1fr 
+    [tres]1fr 
+    [quatro];
+    gap: 30px;
+}
+
+.grid12 div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+.grid12 div:nth-child(5){
+    background-color: brown;
+    
+    /* A gente fala que o filho 5 da coluna 2 começa da coluna 1 e termina na 4*/
+    /* grid-column-start: um;
+    grid-column-end: quatro; */
+    
+    /* Atalho: obs: poderia usar numeros tambem em vez dos nomes*/
+    /* grid-column: um / quatro; */
+
+    /* Com span: eu quero que o start da coluna faça um span de 2 colunas e o fim termine na coluna 3*/
+    /* grid-column: span 2 / 3;
+    grid-row: um / quatro; */
+
+    /* Atalho de linha e coluna de start e fim, COMEÇA NA LINHA 1 | COMEÇA NA COLUNA 1* | TERMINA NA LINHA 4 | TERMINA NA COLUNA 4 */
+    grid-area: um / um / quatro / quatro;
+}
+
+
+/* O mais utilizado */
+.grid13{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Auto fill com o tamanho minimo e o maximo com 1 fragmento */
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.grid13 div{
+    background-color: tomato;
+    min-height: 100px;
+}
+
+.grid13 div:nth-child(5){
+    background-color: brown;
+    /* E por algum motivo especifico eu utilizo o span */
+    /* grid-column: span 2; */
+}
