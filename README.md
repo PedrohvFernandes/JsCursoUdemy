@@ -8,5 +8,9 @@ O curso conta com mais de 145 horas de vídeo sob demanda, aborda introdução a
 
 # Andamento do curso: ✔️(Check) 🕗(Em processo)
 
-- Seção 32: HTML5 e CSS3 (Para iniciantes): 🕗
+- Seção 32: HTML5 e CSS3 (Para iniciantes): ✔️ 12h 22m
+- Seção 33: Landing Page com HTML5 e CSS3:  🕗 4h 5m
 
+# Atividades do curso:
+
+Seção 33 Landing Page:
