@@ -1,0 +1,36 @@
+Fontes: https://fonts.google.com  https://fonts.google.com/specimen/Open+Sans?query=open+sans&preview.text=asasasasas&preview.text_type=custom
+
+https://fonts.google.com/specimen/Montserrat?query=mont&preview.text=as&preview.text_type=custom
+
+
+Imagens SVG -> Imagens vetorizadas:
+
+https://www.svgbackgrounds.com
+
+Icones SVG:
+https://icons8.com.br/icons/set/user
+https://icon-icons.com/pt/
+
+
+CodePen - https://codepen.io/luizomf/full/KKNwMeG
+Github - https://github.com/luizomf/landing-page-cursojs
+Background SVG - https://www.svgbackgrounds.com/#confetti-doodles
+
+
+Validador HTML:
+https://validator.w3.org/nu/#textarea
+
+Validar a acessibilidade, sementicas, etc:
+https://achecker.achecks.ca/checker/index.php  -> a11y -> a CCESSIBILIT y
+
+
+Como mudar o favicon de um site - @Curso em Vídeo HTML5 e CSS3:
+https://www.youtube.com/watch?v=1ZeettFfxys
+https://favicon.io
+
+
+Sobre a twitch:
+https://www.oficinadanet.com.br/games/36209-o-que-e-a-twitch-tudo-o-que-voce-precisa-saber-sobre
+https://pt.wikipedia.org/wiki/Twitch#:~:text=Foi%20lançado%20oficialmente%20em%20beta,de%20visitantes%20únicos%20por%20mês.
+https://pt.wikipedia.org/wiki/Twitch
+https://www.twitch.tv/creatorcamp/pt-br/learn-the-basics/twitch-101/

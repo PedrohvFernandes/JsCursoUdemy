@@ -1,0 +1,7 @@
+ .  o tamanho da fonte no elemento root igual a 62.5%. Minha dúvida é que a unidade "%" faz com que a regra que está sendo aplicada a um elemento seja baseada no elemento pai, certo ? Porém, todos os elementos  descendem do html, certo? Se sim, então, essa porcentagem está sendo aplicada sobre o que? 
+
+    https://stackoverflow.com/questions/28988445/css-62-5-why-do-developers-use-it
+
+.   pq usar variáveis pra cores , não seria mais facil so bota as cores no elemento que vc quer editar , ao invés de criar uma variável pra fazer a mesma coisa:
+
+  Variáveis são usadas para reutilização de código... Imagine que no seu design tem um tema, nesse tema existe uma "primary-color" (cor primária do design). Provavelmente tu vai utilizar essa mesma cor em vários locais do seu CSS. Se algum dia quiser mudar essa cor, simplesmente mude em um único local. Se tu replicar a cor várias vezes no CSS, terá vários locais para alterar posteriormente.
