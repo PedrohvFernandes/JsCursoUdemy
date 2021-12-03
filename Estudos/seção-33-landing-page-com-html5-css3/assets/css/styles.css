@@ -1,168 +1,42 @@
-/* Configurações iniciais do css relacionadas a estrutura: */
-
 /* Em vez importar a fonte pelo html: */
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap'); */
 
-/* Variaveis globais no css para faciltar na manipualação das configurações das propriedades, principalmente das cores */
-:root{
-    --primary-color: #0A1128;
-    --white-color: #fff;
-    --twitch-color: #6441a5;
-    --ligth-gray-color: #EEEEEE;
-    
-    /* Variaveis da twitch */
-    --color-opac-b-14: rgba(0,0,0,0.2);
-    --shadow-elevation-1: 0 1px 2px var(--color-opac-b-14),0 0px 2px var(--color-opac-b-14);
-
-    /* 30px padrão*/
-    --gap: 3rem;
+.intro-content{
+    position: relative;
+    top: -8rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap:var(--gap);
+    height: 100vh;
 }
 
-/* Zerando no css */
-*{
-    margin: 0;
-    padding: 0;
+
+.intro-text-content p a{
+    background-color: var(--white-opacity-color);
+    color: var(--twitch-color);
+    transition: all 450ms ease-in-out;
 }
 
-html{
-    /* Tamnho da fonte em porcentagem, porque ela vai ser configurada como unidade principal rem */
-    /* o HTML esta com 62.5% que é 10px de 16px(100%) padrão do navegador  
-    com isso 1.6rem(filha) x 10px(HTMLouBODY/62.5%) = 16px(filha)
-    */
-    font-size: 62.5%;
-}
-
-body{
-    font-family: 'Open Sans', sans-serif;
-
-    /* 20px --> 2rem(filha) x 10px(HTML/62.5%) = 20px(filha => body) */
-    font-size: 2rem;
-
-    /* Usando variaveis */
-    color: var(--primary-color);
-}
-
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Montserrat', sans-serif;
-}
-
-h1{
-    font-size: 6rem;
-    /* Deixa a letra maiuscula */
-    text-transform: uppercase;
-}
-
-h2{
-    font-size: 5.5rem;
-}
-
-h3{
-    font-size: 5rem;
-}
-
-h4{
-    font-size: 4.5rem;
-}
-
-h5{
-    font-size: 4rem;
-
-}
-
-h6{
-    font-size: 3.5rem;
-
-}
-
-/* Essa classe vai servir pra adicionar o background(bg) ao elemento que eu quiser*/
-.main-bg{
-    background-image: url(/Estudos/seção-33-landing-page-com-html5-css3/assets/img/Main-bg.svg);
-    /* O meu background vai se ajustar com o tamanho da tela */
-    background-size: cover;
-    background-position: center center;
+.intro-text-content p a:hover{
+    background-color: var(--twitch-opacity-color);
     color: var(--white-color);
 }
 
-/* Quando quiser colocar um fundo branco */
-.main-white-bg{
-    background-color: var(--white-color);
-}
-
-/* Configuração padrão pra sustentar o conteudo*/
-.main-content{
-    /* Largura maxima pro site */
-    max-width: 1200px;
-    margin: 0 auto;
-    /* Por padrão padding de 30px, um espaçamento padrão*/
-    padding: var(--gap);
-}
-
-/* Configuração padrão da seção */
-.section{
-    /* Colocando uma altura minima nas seções de 100vh pra ocupar o viewport inteiro do navegador */
-    min-height: 100vh;
-}
-
-a{
-    text-decoration: none;
-}
-
-/* CSS do site */
-.menu{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    border-bottom: 1px solid var(--ligth-gray-color);
-    box-shadow: var(--shadow-elevation-1) !important;
-}
-
-.menu-content{
+.intro-text-content, .intro-img{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0;
-    padding-bottom: 0;
+    flex-flow: column wrap;
+    justify-content: center;
 }
 
-.menu svg{
-    /* width: 40px;
-    height: 40px; */
-    width: 4rem;
-    height: 4rem;
+.intro-text-content h2{
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
 }
 
-.menu h1 a{
-    /* Herda do seu pai */
-    color: inherit;
-}
-
-.menu ul{
-    list-style: none;
-    display: flex;
-}
-
-.menu ul li a{
-    display: block;
-    padding: 2rem;
-    font-size: 1.7rem;
-    color: var(--twitch-color);
-    position: relative;
-}
-
-.menu ul li a::after{
-    content: '';
-    position: absolute;
-    bottom:1rem;
-    left:50%;
-    width: 0%;
-    height: 0.2rem;
-    background-color: var(--twitch-color);
-    transition: all 300ms ease-in-out;
-}
-
-.menu ul li a:hover::after{
-    width: 50%;
-    left: 25%;
+.intro-img img{
+    /* 100% do elemento pai dela */
+    max-width: 100%;
+    height: auto;
 }

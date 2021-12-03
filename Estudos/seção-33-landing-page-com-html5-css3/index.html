@@ -14,9 +14,15 @@
     rel="shortcut icon" 
     href="/Estudos/seção-33-landing-page-com-html5-css3/assets/img/favicon_io twitch/favicon.ico" 
     type="image/x-icon">
+    <!-- O ideal não seria bom ter esse monte de requisição, pois a pagina é unica, então o arquivo css não iria ficar enorme, então o
+    ideal seria ter tudo do css nesse unico arquivo que seja necessario pra exibir a pagina-->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/config-inicial/elements.css">
+    <link rel="stylesheet" href="assets/css/config-inicial/classes-reutilizaveis.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="main-bg">
+<body>
     <!-- Boa pratica: sempre colocar headings e algum texto pra testar as configurações iniciais -->
     <!-- <h1>
         Testando
@@ -30,8 +36,7 @@
 
     <!-- Menu principal -->
     <aside class="menu main-white-bg">
-        <!-- Nosso container: Use section com headings(h1, h2...) -->
-        <section class="main-content menu-content">
+        <div class="main-content menu-content">
             <h1>
                 <a href="#">
                     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -53,9 +58,36 @@
                     <li><a href="">Me apoia ❤️</a></li>
                 </ul>
             </nav>
-        </section>
+        </div>
     </aside>
-    <section class="section main-white-bg"></section>
-    <section class="section main-white-bg"></section>
+
+    <!-- So pra ter um espaçamento do menu -->
+    <div class="menu-spacing"></div>
+    <section class="intro main-bg section">
+        <div class="main-content intro-content">
+            <div class="intro-text-content">
+            
+                <h2>
+                    Sobre mim:
+                </h2>
+                <p>
+                    Olá sou o Pedro Henrique, sou iniciante no desenvolvimento web, comecei a estudar sobre programação web no segundo semestre desse ano de 2021 com HTML5, CSS3, JS e REACT na universidade <a href="https://campanhas.newtonpaiva.br/transferencia?utm_source=google&utm_medium=cpc&utm_campaign=presencial_retorno_2022_1&utm_content=search&gclid=Cj0KCQiAnaeNBhCUARIsABEee8WDKmi6-MBfoptgxbdChzvubzZbZvURJjCbEizukX7-s0KFdEI3g_8aApbsEALw_wcB" target="_blank" rel="noopener noreferrer"> Newton Paiva</a> e agora estou fazendo o <a href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/" target="_blank" rel="noopener noreferrer">Curso da Udemy</a> pra aprimorar minhas hards skills e fiz essa pagina da twitch justamente para treinar os meus conhecimentos que aprendi ate agora 😃
+                </p>
+            </div>
+            <div class="intro-img">
+                <!-- <img src="assets/img/javascript-not-optmized.svg"> -->
+                <img src="assets/img/javascript-optmized.svg" 
+                alt="Tem um homem branco com blusa rosa, calça preta e sapato preto segurando a logo de CSS3,
+                tem uma mulher branca de cabelo rosa, palito rosa forte com uma roupa branca por baixo do palito, calça preta, sapatilha rosa empurrando
+                a logo do Javascript e um outro homem moreno de palito rosa com uma roupa branca por baixo, de calça rosa, com sapato preto segurando
+                a logo do HTML5, atras deles tem uma planata grande com um azul claro e no chão tem tres plantinhas pequenas azuis com roxo com
+                um sombreado escuro e claro, no fim de tudo é uma logo de HTML, CSS e JS em svg">
+            </div>
+        </div>
+    </section>
+
+    <section class="main-white-bg section">
+
+    </section>
 </body>
 </html>

@@ -5,3 +5,11 @@
 .   pq usar variáveis pra cores , não seria mais facil so bota as cores no elemento que vc quer editar , ao invés de criar uma variável pra fazer a mesma coisa:
 
   Variáveis são usadas para reutilização de código... Imagine que no seu design tem um tema, nesse tema existe uma "primary-color" (cor primária do design). Provavelmente tu vai utilizar essa mesma cor em vários locais do seu CSS. Se algum dia quiser mudar essa cor, simplesmente mude em um único local. Se tu replicar a cor várias vezes no CSS, terá vários locais para alterar posteriormente.
+
+
+Sobre varios arquivos css e varias requisições desses arquivos em uma so pagina
+https://medium.com/reactbrasil/code-splitting-e-lazy-loading-em-react-b1ce9870289f
+  Code spliting: divide o js e css tudo que é necessario pra carregar a pagina num arquivo só e em outro pagina precisar de outro js, a gente
+  utiliza outro js assim por diante, porque dessa forma a gente não carrega tanta coisa num carregamento de pagina para o usuario, com isso
+  o site fica mais leve. Mas em teoria é sempre melhor voce ter menos requisições, nesse caso dessa pagina foram feitos arquivos css separados
+  so pra evitar rolamentos 

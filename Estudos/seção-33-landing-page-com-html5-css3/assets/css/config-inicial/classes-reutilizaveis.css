@@ -1,0 +1,34 @@
+/* Configurações iniciais do css relacionadas a estrutura: */
+
+/* Essa classe vai servir pra adicionar o background(bg) ao elemento que eu quiser*/
+.main-bg{
+    background-image: url(/Estudos/seção-33-landing-page-com-html5-css3/assets/img/Main-bg.svg);
+    /* O meu background vai se ajustar com o tamanho da tela */
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+}
+
+/* Quando quiser colocar um fundo branco */
+.main-white-bg{
+    background-color: var(--white-color);
+}
+
+/* Configuração padrão pra sustentar o conteudo*/
+.main-content{
+    /* Largura maxima pro site */
+    max-width: 120rem; /*1200px;*/
+    margin: 0 auto;
+    /* Por padrão padding de 30px, um espaçamento padrão*/
+    padding: var(--gap);
+}
+
+/* Configuração padrão da seção */
+.section{
+    /* Colocando uma altura minima nas seções de 100vh pra ocupar o viewport inteiro do navegador */
+    min-height: 100vh;
+}
+
+.menu-spacing{
+    height: 6.5rem;
+}

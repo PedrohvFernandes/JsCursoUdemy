@@ -1,0 +1,62 @@
+/* Configurações iniciais do css relacionadas a estrutura: */
+
+/* Zerando no css */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    /* Tamnho da fonte em porcentagem, porque ela vai ser configurada como unidade principal rem */
+    /* o HTML esta com 62.5% que é 10px de 16px(100%) padrão do navegador  
+    com isso 1.6rem(filha) x 10px(HTMLouBODY/62.5%) = 16px(filha)
+    */
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+
+    /* 20px --> 2rem(filha) x 10px(HTML/62.5%) = 20px(filha => body) */
+    font-size: 2rem;
+
+    /* Usando variaveis */
+    color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-size: 6rem;
+    /* Deixa a letra maiuscula */
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 5.5rem;
+}
+
+h3{
+    font-size: 5rem;
+}
+
+h4{
+    font-size: 4.5rem;
+}
+
+h5{
+    font-size: 4rem;
+
+}
+
+h6{
+    font-size: 3.5rem;
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}

@@ -11,6 +11,13 @@ Icones SVG:
 https://icons8.com.br/icons/set/user
 https://icon-icons.com/pt/
 
+Imagens svgs:
+https://undraw.co
+
+Aula 601 landing page - seção intro: Pra otimizar svg caso ele não mude tamanho ou algo do tipo:
+marca a opção prefer viewBox to width/height e copia o codigo svg e salva aqui no vscode no html ou cria
+um arquivo svg
+https://jakearchibald.github.io/svgomg/
 
 CodePen - https://codepen.io/luizomf/full/KKNwMeG
 Github - https://github.com/luizomf/landing-page-cursojs

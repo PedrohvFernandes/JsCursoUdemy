@@ -1,0 +1,16 @@
+/* Variaveis globais no css para faciltar na manipualação das configurações das propriedades, principalmente das cores */
+:root{
+    --primary-color: #0A1128;
+    --white-color: #fff;
+    --white-opacity-color: rgba(255, 255, 255, 0.774);
+    --twitch-color: #6441a5;
+    --twitch-opacity-color:rgba(100, 65, 165, 0.863);
+    --ligth-gray-color: #EEEEEE;
+    
+    /* Variaveis da twitch */
+    --color-opac-b-14: rgba(0,0,0,0.2);
+    --shadow-elevation-1: 0 1px 2px var(--color-opac-b-14),0 0px 2px var(--color-opac-b-14);
+
+    /* 30px padrão*/
+    --gap: 3rem;
+}
