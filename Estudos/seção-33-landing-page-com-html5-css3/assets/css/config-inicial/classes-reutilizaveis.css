@@ -12,6 +12,13 @@
 /* Quando quiser colocar um fundo branco */
 .main-white-bg{
     background-color: var(--white-color);
+    /* Usando variaveis */
+    color: var(--primary-color);
+}
+
+.main-white-bg-font-color{
+    background-color: var(--twitch-opacity-color);
+    border-radius: 10px;
 }
 
 /* Configuração padrão pra sustentar o conteudo*/
@@ -19,8 +26,9 @@
     /* Largura maxima pro site */
     max-width: 120rem; /*1200px;*/
     margin: 0 auto;
-    /* Por padrão padding de 30px, um espaçamento padrão*/
-    padding: var(--gap);
+    /* Por padrão padding de 30px, um espaçamento padrão
+    e 160px pro topo*/
+    padding: 10rem var(--gap);
 }
 
 /* Configuração padrão da seção */

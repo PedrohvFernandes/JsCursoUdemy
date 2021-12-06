@@ -1,13 +1,14 @@
 /* Em vez importar a fonte pelo html: */
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap'); */
 
+/* Intro */
 .intro-content{
     position: relative;
     top: -8rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap:var(--gap);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
@@ -28,15 +29,90 @@
     justify-content: center;
 }
 
-.intro-text-content h2{
-    font-size: 6rem;
-    margin-bottom: 5rem;
-    text-transform: uppercase;
-    line-height: 1.2;
-}
-
 .intro-img img{
     /* 100% do elemento pai dela */
     max-width: 100%;
     height: auto;
 }
+
+/* O QUE É A TWITCH */
+.oqueeatwitch-content{
+    max-width: 64rem;
+    display: flex;
+    /* flex-flow: column wrap; */
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.oqueeatwitch-content p a{
+    color: var(--twitch-color);
+    transition: all 450ms ease-in-out;
+}
+
+.oqueeatwitch-content p a:hover{
+    background-color: var(--twitch-opacity-color);
+    color: var(--white-color);
+}
+
+/* QUANDO COMEÇOU A TWITCH */
+.grid-one-content{
+    display: flex;
+    /* flex-flow: column wrap; */
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    min-height: 230vh;
+}
+
+.grid-one-content p a{
+    background-color: var(--white-opacity-color);
+    color: var(--twitch-color);
+    transition: all 450ms ease-in-out;
+}
+
+.grid-one-content p a:hover{
+    background-color: var(--twitch-opacity-color);
+    color: var(--white-color);
+}
+
+.grid-main-heading{
+    margin-bottom: 1rem;
+}
+
+.grid-description{
+    padding-bottom: 5rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    /* Contador em css pra colocar os numeros com o before nos titulos*/
+    counter-reset: grid-counter;
+}
+
+.grid h3{
+    font-size: 2.5rem;
+    /* A posição relativa é para que o numero criado no before fique dentro
+    do h3, no caso ele fica posicionado em realção ao meu h3 mesmo que o numero
+    seja absoluto*/
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+
+/* Before é pra falar que esta antes do meu titulo */
+.grid h3::before{
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top:-4rem;
+    left: -2rem;
+    /* 5deg é 5 graus */
+    transform: rotate(5deg);
+}   

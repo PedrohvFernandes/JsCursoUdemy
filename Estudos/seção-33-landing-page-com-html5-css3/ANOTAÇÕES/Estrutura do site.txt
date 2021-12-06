@@ -1,11 +1,11 @@
 
 CodePen - https://codepen.io/luizomf/full/KKNwMeG
 
-Começo -> Quem sou eu(Pedro, fiz essa pagina da twitch para treinar, etc)
+Intro -> Quem sou eu(Pedro, fiz essa pagina da twitch para treinar, etc)
 
-Intro - O que é(A Twitch)
+top 3 com flex - O que é(A Twitch)
 
-top 3 - (Quando começou a twitch -> divididr em 3 grades de anos mais importantes)
+top 3 com grid - (Quando começou a twitch -> divididr em 3 grades de anos mais importantes)
 
 work - (sobre os serviços dividir em 3 grades)
 
