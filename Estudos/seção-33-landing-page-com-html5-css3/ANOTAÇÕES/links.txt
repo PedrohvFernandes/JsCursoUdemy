@@ -23,6 +23,9 @@ CodePen - https://codepen.io/luizomf/full/KKNwMeG
 Github - https://github.com/luizomf/landing-page-cursojs
 Background SVG - https://www.svgbackgrounds.com/#confetti-doodles
 
+Imagens normais:
+https://unsplash.com
+source.unsplash.com/random/800x800
 
 Validador HTML:
 https://validator.w3.org/nu/#textarea

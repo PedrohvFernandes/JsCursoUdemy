@@ -16,11 +16,6 @@
     color: var(--primary-color);
 }
 
-.main-white-bg-font-color{
-    background-color: var(--twitch-opacity-color);
-    border-radius: 10px;
-}
-
 /* Configuração padrão pra sustentar o conteudo*/
 .main-content{
     /* Largura maxima pro site */

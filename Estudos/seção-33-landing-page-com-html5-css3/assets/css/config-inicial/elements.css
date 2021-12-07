@@ -66,3 +66,37 @@ a{
 p{
     margin-bottom: 3rem;
 }
+
+.responsive-table{
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+table{
+    min-width: 36rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table caption{
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+table thead th{
+    background-color: var(--cinza-gray-color);
+    color:var(--twitch-color);
+}
+
+table td, table th{
+    /* Esse white-space faz não quebrar o texto. Obs: isso voce so usa quando a tabela
+    não tem necessidade quebrar, se tem textos pequenos */
+    white-space: nowrap;
+    padding: 1rem;
+    text-align: center;
+    color:var( --primary-color);
+    border: 0.1rem solid var(--twitch-color);
+    background-color: var(--white-opacity-color);
+}
