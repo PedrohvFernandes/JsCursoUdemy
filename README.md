@@ -7,10 +7,11 @@ Este repositório contém todas as atividades e projetos de aprendizagem desenvo
 O curso conta com mais de 145 horas de vídeo sob demanda, aborda introdução ao desenvolvimento web, front-end, back-end.
 
 # Andamento do curso: ✔️(Check) 🕗(Em processo)
-
+- Seção 1: Configurando o ambiente no Windows e Linux: ✔️ 1h 7m
 - Seção 32: HTML5 e CSS3 (Para iniciantes): ✔️ 12h 22m
-- Seção 33: Landing Page com HTML5 e CSS3:  🕗 4h 5m
+- Seção 33: Landing Page com HTML5 e CSS3:  ✔️ 4h 5m
+- Seção 2: JavaScript Básico - Para iniciantes:  🕗 7h 40m
 
 # Atividades do curso:
 
-Seção 33 Landing Page:
+Seção 33 Landing Page: https://atwitch.netlify.app
