@@ -48,3 +48,11 @@ https://www.twitch.tv/creatorcamp/pt-br/learn-the-basics/twitch-101/
 
 Pra criar uma pagina sua:
 https://beacons.ai/
+
+
+Menu sanduiche:three line html code https://en.wikipedia.org/wiki/Triple_bar#:~:text=The%20triple%20bar%2C%20≡%2C%20is,%26Congruent%3B%2C%20≡%20).     https://stackoverflow.com/questions/34693811/where-do-i-get-a-3-horizontal-lines-symbol-for-my-webpage
+There is also ☰ &#9776;,
+
+X:html times code https://en.wikipedia.org/wiki/Multiplication_sign
+
+Hospedagem: https://www.netlify.com
