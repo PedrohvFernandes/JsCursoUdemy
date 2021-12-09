@@ -56,3 +56,5 @@ There is also ☰ &#9776;,
 X:html times code https://en.wikipedia.org/wiki/Multiplication_sign
 
 Hospedagem: https://www.netlify.com
+
+Aula: 611. Emmet Abbreviation - Dicas de produtividade no VSCode : Emmet pra escrever o HTML mais rapido : https://docs.emmet.io/cheat-sheet/
