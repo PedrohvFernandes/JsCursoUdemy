@@ -382,4 +382,18 @@ table td.has-checkmark {
     .menu-spacing{
         display: none;
     }
+
+    h2{
+        font-size: 3rem;
+    }
+    
+    .footer{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 320px){
+    h2{
+        font-size: 2.5rem;
+    }
 }
