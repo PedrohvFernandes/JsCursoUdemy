@@ -1,0 +1,60 @@
+LINKS:
+
+GITHUB:
+
+Tudo o que você assistir nas aulas (o código que eu digito) está em um repositório no Github. Você pode acessá-lo via: https://github.com/luizomf/curso-js
+
+Use o código apenas como referência em seções mais complexas. Tente digitar a maioria dos códigos, isso ajuda a fixar o conteúdo.
+
+As alterações são enviadas ao final das aulas, com o conteúdo que determinado arquivo ficou ao terminar determinada aula.
+
+Uma observação importante: as pastas não estão na ordem em que a Udemy cria automaticamente, mas na ordem de criação. Você vai me ver dizer em várias aulas que estou na pasta "Aula XXX", essa é a ordem que será apresentada no repositório (caso eu não fale, é só observar em qual pasta estou no vídeo).
+
+Em algumas seções específicas, existem repositórios separados. Como as seções de API Rest, React ou TypeScript. Isso será especificado no início de cada seção.
+
+DISCORD:
+
+Com a intenção de conectar os alunos deste curso (e demais cursos do mesmo instrutor), criamos um servidor no discord https://discord.gg/kwENvAkhUe.
+
+A ideia é simplesmente conectar alunos, fazer networking, trocar informações e coisas relacionadas. Para tirar dúvidas com o instrutor, você ainda deve usar o sistema de perguntas e respostas da Udemy, visto que o grupo é voltado para relações entre alunos somente.
+
+Veja todos os meus cursos em: https://www.otaviomiranda.com.br/2017/meus-cursos/
+
+Atenção: só para ficar claro, eu não participo ativamente dessa comunidade (ou quase nenhuma outra rede social).
+
+
+CURIOSIDADES:
+
+- Aula 3:
+
+O vscode possui um terminal integrado, tipo um cmd -> em ver(view) da pra acessar o terminal ou (" ctrl + ' ")
+no console do navegador em inspecionar elemento da pra executar um comando igual no terminal do vscode e no cmd
+
+Nos terminais vscode ou cmd:
+
+pra entrar na pasta -> cd nomeDapasta\outrapastaSeTiver\etc 
+pra executar o arquivo main -> node index.js
+
+ou executar direto na pasta -> node nomedaPasta\outrapastaSeTiver\Nomedoarquivo.js
+
+ex: c:\Users\Pedro\Documents\GitHub\JsCursoUdemy\Estudos\Seção-2 JavaScript Basico para iniciantes\aula3 Navegador vs Node (HTML + JavaScript)\index.js
+
+Sobre o js: Não é recomendado juntar js no html ou ate mesmo o css no html, pois o arquivo tende a ficar enorme mais do que o esperado
+mas existe o framework React que unifica o HTML com JS, mas de uma maneira elegante
+
+Sobre front-end: a parte frontal que o usuario ve, a gente esta falando de uma pagina que é carregada,  renderizada e executada no computador client,
+da pessoa que esta vendo aquela pagina, nesse caso estamos trabalhando na parte do front-end
+
+temos o back-end: que é um servidor que vai servir as paginas e dados
+
+Node vs chrome: mesmo que o node e o chrome tendo a mesma engine executando JavaScript eles não tem a mesma coisa e não se comportam de maneira igual
+
+Se eu executar o metodo alert('olá mundo') pelo node(code runner) ele da um erro pelo fato de não ter uma janel/window igual no chrome ou outro navegador, o node fala
+que o alert não esta definido, que ele não sabe executar essa função
+
+Então são dois ambientes diferentes, e eles geralmente eles não tem as mesmas coisas, quando a gente trabalha no navegador a gente manipula o DOM que são
+os elementos da pagina: div, p, section etc, que é o front-end do navegador
+
+DOM -> Modelo de Objeto de Documentos
+
+Agora com base de dados, rotas da aplicação, etc isso ae ja é o back-end o node
