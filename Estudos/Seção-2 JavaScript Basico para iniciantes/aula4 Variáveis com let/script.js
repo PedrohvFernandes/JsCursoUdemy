@@ -14,13 +14,37 @@ console.log(nomeScript)
 // Hoje a gente usa mais o let em vez do var, pois o var ele tem um escopo geral, qual quer funcção pode acessar ela, enquanto o let somente aquele bloco de codigo
 // Com isso var não tem segurança nem uma. Com var é possivel fazer hoisting https://developer.mozilla.org/pt-BR/docs/Glossary/Hoisting tipo uma função
 // Isso quer dizer que ela pode ser inicializada depois mas antes ela pode ja atribuir um valor, tipo uma func ela pode ser invocada antes e criar ela depois
+// A var pode ser redeclarada, enquanto a let e a const não pode
+// a var e o let podem ser inicializadas vazias ou ja com valores ou posteriormente atribuir algum valor para elas
 
 // nome -> nome da variavel/apelido que vai ter algum valor, nesse caso é uma string
 // let nome = 'João'
 // let nome = 'Henrique'
-let nome
-nome = 'Henrique'
+let nome // Declarou a variavel
+nome = 'Henrique'// ela pode atribuir qualquer valor, nesse caso estamos inicializando a variavel
+console.log('o' + nome + ' é dev')
+
+nome = 'João' // reatribuindo outro valor
 console.log('o' + nome + ' é dev')
 
 var nomeMaria = 'maria'
 console.log(nomeMaria)
+
+// não pode criar variaveis com palavras reservadas da lingugagem
+//let let
+
+// As variaveis precisam ter nomes significativos, para facilitar no entendimento
+let nomeCliente = 'João'
+console.log(nomeCliente)
+
+// Não pode começar o nome de uma variável com um número, não pode ter espaços, nem traços -
+// Pode usar os estilos camelCase ou snake_case 
+
+let nome_cliente
+let nomePessoas
+
+// Case-sensitive -> letras maiusculas e minusculas tem diferença pro motor do js
+
+// Não podemos redeclarar variaveis com let ou const, somente com var
+
+// Não utilize VAR, UTILIZE LET
