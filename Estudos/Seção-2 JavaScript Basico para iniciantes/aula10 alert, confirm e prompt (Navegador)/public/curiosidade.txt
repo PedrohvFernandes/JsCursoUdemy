@@ -1,0 +1,7 @@
+Window -> Objeto pai -> se refere a janela do navegador
+
+O alert ta dentro do objeto windows
+
+console.log -> a gente chama o metodo log que esta dentro do objeto console, tipo no Java
+
+no navegador no inspecionar quando é digitado a variavel ele ja retorna o valor da variavel digitada
